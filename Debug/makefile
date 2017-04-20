@@ -8,7 +8,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/shader/subdir.mk
 -include src/math/subdir.mk
 -include src/graphic/subdir.mk
 -include src/subdir.mk

@@ -23,11 +23,19 @@ namespace spark{ namespace graphics{
  		 GLuint programa 	= glCreateProgram();
  		 GLuint vertex 		= glCreateShader(GL_VERTEX_SHADER);
  		 GLuint fragment 	= glCreateShader(GL_FRAGMENT_SHADER);
+ 		 GLint vert_source_ln[1];
+ 		 GLint frag_source_ln[1];
 
- 		 const char* vert_src = lee_arch(m_ruta_vertex).c_str();
- 		 const char* frag_src = lee_arch(m_ruta_fragment).c_str();
+ 		 std::string vert_src = FILEUT::lee_arch(m_ruta_vertex);
+ 		 std::string frag_src = FILEUT::lee_arch(m_ruta_fragment);
 
- 		 glGetShaderSource(vertex, 1, &vert_src, NULL);
+ 		 const char *vrt_s = vert_src.c_str();
+ 		 vert_source_ln[0] = vert_src.length();
+
+ 		 const char *frg_s = frag_src.c_str();
+ 		 frag_source_ln[0] = frag_src.length();
+
+ 		 glShaderSource(vertex, 1, &vrt_s, vert_source_ln);
  		 glCompileShader(vertex);
 
  		 GLint result;
@@ -43,7 +51,7 @@ namespace spark{ namespace graphics{
  			return (0);
  		 }
 
- 		 glGetShaderSource(fragment, 1, &frag_src, NULL);
+ 		 glShaderSource(fragment, 1, &frg_s, frag_source_ln);
 		 glCompileShader(fragment);
 
 		 result = 0;

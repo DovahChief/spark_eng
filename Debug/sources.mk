@@ -43,6 +43,5 @@ GEOM_DEPS :=
 SUBDIRS := \
 src/graphic \
 src/math \
-src/shader \
 src \
 
