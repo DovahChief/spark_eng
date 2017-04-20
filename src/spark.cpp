@@ -2,6 +2,7 @@
 #include "maths.h"
 
 int main(){
+
     using namespace spark;
     using namespace graphics;
     using namespace math;
