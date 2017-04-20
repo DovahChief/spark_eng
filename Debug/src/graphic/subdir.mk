@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/graphic/display.cpp \
+../src/graphic/shader.cpp \
 ../src/graphic/window.cpp 
 
 OBJS += \
 ./src/graphic/display.o \
+./src/graphic/shader.o \
 ./src/graphic/window.o 
 
 CPP_DEPS += \
 ./src/graphic/display.d \
+./src/graphic/shader.d \
 ./src/graphic/window.d 
 
 
