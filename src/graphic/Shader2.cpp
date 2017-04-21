@@ -51,13 +51,13 @@ Shader2::~Shader2(){
 void Shader2::Bind(){
     glUseProgram(m_programa);
 }
-/*
+
 void Shader2::Update(const transform& tr, const camara& cam){
     glm::mat4 model = cam.get_view_projection() * tr.get_model();
     glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
     //glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &tr.get_model()[0][0]);
 }
-*/
+
 void Shader2::Update(const transform& tr){
     glm::mat4 model =  tr.get_model();
     glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);

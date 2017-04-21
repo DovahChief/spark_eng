@@ -43,5 +43,6 @@ GEOM_DEPS :=
 SUBDIRS := \
 src/graphic \
 src/math \
+src/model \
 src \
 

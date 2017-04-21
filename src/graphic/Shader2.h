@@ -10,7 +10,8 @@
 
 
 #include "transform.h"
-//#include "camara.h"
+#include "camara.h"
+#include "../utils/file_utils.h"
 #include <string>
 #include <GL/glew.h>
 namespace spark{ namespace graphics{
@@ -20,7 +21,7 @@ class Shader2
         Shader2( const std::string& file_name);
         virtual ~Shader2();
         void Bind();
-        //void Update(const transform& tr, const camara& cam);
+        void Update(const transform& tr, const camara& cam);
         void Update(const transform& tr);
     protected:
 

@@ -6,6 +6,7 @@
 #include "graphic/Shader2.h"
 #include "graphic/textu.h"
 #include "graphic/mesh.h"
+#include "graphic/camara.h"
 
 
 #endif // MATH_H_INCLUDED

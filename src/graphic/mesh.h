@@ -13,6 +13,7 @@
 #include <vector>
 #include "../math/vec2.h"
 #include "../math/vec3.h"
+#include "objloader.h"
 
 /*
          GL_POINTS, GL_LINE_STRIP, GL_LINE_LOOP, GL_LINES, GL_LINE_STRIP_ADJACENCY,
@@ -41,36 +42,41 @@ using namespace spark;
 using namespace math;
 class vertex {
 public:
-    vertex(const vec3& _pos, const vec2 _textCoord){
-        this->pos = _pos;
-        this->textCoord = _textCoord;
-    }
-//private:
-    vec3 pos;
-    vec2 textCoord;
-protected:
-
+    vertex(const vec3 _pos,const vec2 _textCoord){
+        pos.x = _pos.x; pos.y = _pos.y; pos.z = _pos.z;
+        textCoord.x = _textCoord.x; textCoord.y = _textCoord.y;
+    	}
+    glm::vec3* getPos(){return (&pos);}
+    glm::vec2* getCoord(){return (&textCoord);}
+private:
+    glm::vec3 pos;
+    glm::vec2 textCoord;
 };
 
 class mesh{
 
     public:
-        mesh(vertex* vertices, unsigned int num_vertices);
+		mesh(const std::string& filename);
+		mesh(vertex* vertices, unsigned int num_vertices);
+        mesh(vertex* vertices, unsigned int num_vertices,
+        		unsigned int* indices, unsigned int num_indices);
         virtual ~mesh();
         void draw(modo_dibujo m_dib = triangles);
-
-    protected:
 
     private:
         mesh(const mesh& other);
         void operator=(const mesh& other);
+        void init_mesh(const IndexedModel& model);
 
-        enum {POSITION_VB, NUM_BUFFERS, TEXT_COORD_VB };
+        enum {
+        	POSITION_VB,
+			NUM_BUFFERS,
+			INDEX_VB,
+			TEXT_COORD_VB };
 
         GLuint m_vertexArrayObj;
         GLuint m_vertexArrayBuff[NUM_BUFFERS];
         unsigned int m_draw_count;
-
 };
 
 }}

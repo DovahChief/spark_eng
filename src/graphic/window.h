@@ -30,8 +30,8 @@ namespace spark{ namespace graphics{
         void clear() const;
         bool cerrado() const;
 
-        inline int get_ancho() const {return m_ancho;}
-        inline int get_alto()  const {return m_alto;}
+        inline int get_ancho() const {return (m_ancho);}
+        inline int get_alto()  const {return (m_alto);}
         inline void set_alto(int alto) {m_alto = alto;}
         inline void set_ancho(int ancho) {m_ancho = ancho;}
 

@@ -6,6 +6,7 @@
 CPP_SRCS += \
 ../src/graphic/Shader2.cpp \
 ../src/graphic/mesh.cpp \
+../src/graphic/objloader.cpp \
 ../src/graphic/shader.cpp \
 ../src/graphic/textu.cpp \
 ../src/graphic/window.cpp 
@@ -19,6 +20,7 @@ C_DEPS += \
 OBJS += \
 ./src/graphic/Shader2.o \
 ./src/graphic/mesh.o \
+./src/graphic/objloader.o \
 ./src/graphic/shader.o \
 ./src/graphic/stb_image.o \
 ./src/graphic/textu.o \
@@ -27,6 +29,7 @@ OBJS += \
 CPP_DEPS += \
 ./src/graphic/Shader2.d \
 ./src/graphic/mesh.d \
+./src/graphic/objloader.d \
 ./src/graphic/shader.d \
 ./src/graphic/textu.d \
 ./src/graphic/window.d 
