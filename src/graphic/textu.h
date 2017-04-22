@@ -9,7 +9,7 @@ class Texture
 {
 public:
 	Texture(const std::string& fileName);
-	void Bind(unsigned int unit);
+	void Bind(unsigned int unit = 0);
 	virtual ~Texture();
 
 private:

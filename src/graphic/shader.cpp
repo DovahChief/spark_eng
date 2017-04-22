@@ -11,23 +11,23 @@
 
 namespace spark{ namespace graphics{
 
- 	 shader::shader(const char* ruta_vertex,const char* ruta_fragment)
+ 	 shader_2::shader_2(const char* ruta_vertex,const char* ruta_fragment)
  	 : m_ruta_fragment (ruta_fragment), m_ruta_vertex(ruta_vertex)
  	 {
  		 	 m_shader_id = load();
  	 }
 
- 	 shader::~shader(){ glDeleteProgram(m_shader_id);}
+ 	 shader_2::~shader_2(){ glDeleteProgram(m_shader_id);}
 
- 	 GLuint shader::load(){
+ 	 GLuint shader_2::load(){
  		 GLuint programa 	= glCreateProgram();
  		 GLuint vertex 		= glCreateShader(GL_VERTEX_SHADER);
  		 GLuint fragment 	= glCreateShader(GL_FRAGMENT_SHADER);
  		 GLint vert_source_ln[1];
  		 GLint frag_source_ln[1];
 
- 		 std::string vert_src = FILEUT::lee_arch(m_ruta_vertex);
- 		 std::string frag_src = FILEUT::lee_arch(m_ruta_fragment);
+ 		 std::string vert_src = F::lee_arch(m_ruta_vertex);
+ 		 std::string frag_src = F::lee_arch(m_ruta_fragment);
 
  		 const char *vrt_s = vert_src.c_str();
  		 vert_source_ln[0] = vert_src.length();
@@ -80,13 +80,11 @@ namespace spark{ namespace graphics{
 
  	 }
 
- 	 void shader::enable() const {
+ 	 void shader_2::enable() const {
  		 glUseProgram(m_shader_id);
  	 }
- 	 void shader::disable() const{
+ 	 void shader_2::disable() const{
  		 glUseProgram(0);
  	 }
 
 }}
-
-

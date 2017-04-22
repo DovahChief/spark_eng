@@ -11,6 +11,25 @@
 //ctor
 namespace spark { namespace graphics {
 
+void mesh::init_mesh(const IndexedModel& model){
+	m_draw_count = model.indices.size();
+	glGenVertexArrays(1, &m_vertexArrayObj);
+	glBindVertexArray(m_vertexArrayObj);
+	glGenBuffers(NUM_BUFFERS, m_vertexArrayBuff);
+	glBindBuffer(GL_ARRAY_BUFFER ,m_vertexArrayBuff[POSITION_VB]);
+	glBufferData(GL_ARRAY_BUFFER, model.positions.size()*sizeof(model.positions[0]), &model.positions[0], GL_STATIC_DRAW);
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+	//glBindVertexArray(0);
+	glBindBuffer(GL_ARRAY_BUFFER ,m_vertexArrayBuff[TEXT_COORD_VB]);
+	glBufferData(GL_ARRAY_BUFFER, model.positions.size()*sizeof(model.texCoords[0]), &model.texCoords[0], GL_STATIC_DRAW);
+	glEnableVertexAttribArray(1);
+	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, 0);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER ,m_vertexArrayBuff[INDEX_VB]);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.indices.size()*sizeof(model.indices[0]), &model.indices[0], GL_STATIC_DRAW);
+	glBindVertexArray(0);
+
+}
 
 mesh::mesh(const std::string& filename){
 	IndexedModel model = OBJModel(filename).ToIndexedModel();
@@ -41,6 +60,19 @@ mesh::mesh(vertex* vertices, unsigned int num_vertices){
 	}
 	init_mesh(model);
 }
+
+mesh::mesh(GLfloat vertices[] , unsigned int num_vertices){
+	IndexedModel model;
+	for(unsigned int i =0 ; i <num_vertices; i+=3){
+		model.positions.push_back(glm::vec3(vertices[i],vertices[i+1],vertices[i+2]));
+		model.texCoords.push_back(glm::vec2(vertices[i],vertices[i+1]));
+		model.indices.push_back(i);
+		model.indices.push_back(i+1);
+		model.indices.push_back(i+2);
+	}
+
+	init_mesh(model);
+}
 //dtor
 mesh::~mesh(){ glDeleteVertexArrays(1, &m_vertexArrayObj); }
 
@@ -56,34 +88,7 @@ void mesh::draw(modo_dibujo m_dib){
          GL_LINES_ADJACENCY, GL_TRIANGLE_STRIP, GL_TRIANGLE_FAN, GL_TRIANGLES,
          GL_TRIANGLE_STRIP_ADJACENCY, GL_TRIANGLES_ADJACENCY, GL_PATCHES, GL_POLYGON
 */
-void mesh::init_mesh(const IndexedModel& model){
 
-	m_draw_count = model.indices.size();
-
-	glGenVertexArrays(1, &m_vertexArrayObj);
-	glBindVertexArray(m_vertexArrayObj);
-
-	glGenBuffers(NUM_BUFFERS, m_vertexArrayBuff);
-	glBindBuffer(GL_ARRAY_BUFFER ,m_vertexArrayBuff[POSITION_VB]);
-	glBufferData(GL_ARRAY_BUFFER, model.positions.size()*sizeof(model.positions[0]), &model.positions[0], GL_STATIC_DRAW);
-
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-	//glBindVertexArray(0);
-
-	glBindBuffer(GL_ARRAY_BUFFER ,m_vertexArrayBuff[TEXT_COORD_VB]);
-	glBufferData(GL_ARRAY_BUFFER, model.positions.size()*sizeof(model.texCoords[0]), &model.texCoords[0], GL_STATIC_DRAW);
-
-	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, 0);
-
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER ,m_vertexArrayBuff[INDEX_VB]);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.indices.size()*sizeof(model.indices[0]), &model.indices[0], GL_STATIC_DRAW);
-
-
-	glBindVertexArray(0);
-
-}
 }}
 
 

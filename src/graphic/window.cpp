@@ -26,7 +26,7 @@ namespace spark{ namespace graphics{
         void key_callback(GLFWwindow * win,  int key, int scancode, int action, int mods);
         void mouse_btn_call(GLFWwindow * win,  int btn, int action, int mods);
         void cursor_pos_call(GLFWwindow * win,  double xpos, double ypos);
-
+        
         //constructor
         window::window(const char* nombre, int ancho, int alto){
             m_alto = alto;
@@ -45,14 +45,14 @@ namespace spark{ namespace graphics{
 
             if(!glfwInit()){
                 std::cout<<" error a inicializar glfw "<<std::endl;
-                return (false);
+                return false;
             }
 
             m_ventana =  glfwCreateWindow(m_ancho, m_alto, m_nombre, NULL, NULL);
             if(!m_ventana){
                 glfwTerminate();
                 std::cout<<"fallo creacion de la ventana"<<std::endl;
-                return (false);
+                return false;
             }
             glfwMakeContextCurrent(m_ventana);
             glfwSetWindowUserPointer(m_ventana,this);
@@ -60,15 +60,15 @@ namespace spark{ namespace graphics{
             glfwSetKeyCallback(m_ventana , key_callback);
             glfwSetMouseButtonCallback(m_ventana, mouse_btn_call);
             glfwSetCursorPosCallback(m_ventana, cursor_pos_call);
-
+            
             glEnable(GL_CULL_FACE);
             glCullFace(GL_BACK);
-
+            
             if(glewInit() != GLEW_OK){
                 std::cout<<"fallo al inicializar GLEW!!!"<<std::endl;
-                    return (false);
+                    return false;
             }
-            return (true);
+            return true;
         }
 
         //destructor
@@ -77,15 +77,15 @@ namespace spark{ namespace graphics{
         //revisa que una tecla este presionada
         bool window::is_key_pressed(unsigned int keycode) const{
             //por hacer loguear esto
-            if(keycode >= MAX_KEYS) return (false);
-            return (m_keys[keycode]);
+            if(keycode >= MAX_KEYS) return false;
+            return m_keys[keycode];
         }
 
         //revisa que un boton de mouse este presionado
         bool window::is_mouse_btn_pressed(unsigned int boton) const{
             //por hacer loguear esto
-            if(boton >= MAX_BUTTONS) return (false);
-            return (m_mouse_btn[boton]);
+            if(boton >= MAX_BUTTONS) return false;
+            return m_mouse_btn[boton];
         }
 
         void window::mouse_position(double& x, double& y) const{
@@ -94,7 +94,7 @@ namespace spark{ namespace graphics{
         }
 
         //checa si la ventana esta cerrada
-        bool window::cerrado() const { return (glfwWindowShouldClose(m_ventana) == 1);}
+        bool window::cerrado() const { return glfwWindowShouldClose(m_ventana) == 1;}
 
         //saca los eventos y actualiza la ventana
         void window::update() {

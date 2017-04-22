@@ -40,6 +40,8 @@ enum modo_dibujo {punto         = GL_POINTS,
 
 using namespace spark;
 using namespace math;
+
+
 class vertex {
 public:
     vertex(const vec3 _pos,const vec2 _textCoord){
@@ -58,13 +60,12 @@ class mesh{
     public:
 		mesh(const std::string& filename);
 		mesh(vertex* vertices, unsigned int num_vertices);
-        mesh(vertex* vertices, unsigned int num_vertices,
-        		unsigned int* indices, unsigned int num_indices);
+		mesh(GLfloat vertices[], unsigned int num_vertices);
+        mesh(vertex* vertices, unsigned int num_vertices, unsigned int* indices, unsigned int num_indices);
         virtual ~mesh();
         void draw(modo_dibujo m_dib = triangles);
 
     private:
-        mesh(const mesh& other);
         void operator=(const mesh& other);
         void init_mesh(const IndexedModel& model);
 

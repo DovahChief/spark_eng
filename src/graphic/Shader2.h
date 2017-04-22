@@ -14,34 +14,32 @@
 #include "../utils/file_utils.h"
 #include <string>
 #include <GL/glew.h>
+#include <fstream>
+#include <iostream>
+
 namespace spark{ namespace graphics{
-class Shader2
+
+class shader
 {
     public:
-        Shader2( const std::string& file_name);
-        virtual ~Shader2();
-        void Bind();
-        void Update(const transform& tr, const camara& cam);
-        void Update(const transform& tr);
-    protected:
+        shader(const std::string& file_v, const std::string& file_f);
+        virtual ~shader();
+        void enable();
+        void disable();
+        void update(const transform& tr, const camara& cam);
+        void update(const transform& tr);
+        GLuint get_id(){return (m_shader_id);}
 
     private:
         static const unsigned int NUM_SHADERS = 2;
-
-        //Shader2(const Shader2& other){}
-        //void operator=(const shader& other) {}
-
         enum {
             TRANSFORM_U,
             NUM_UNIFORMS
         };
 
-        GLuint m_programa;
+        GLuint m_shader_id;
         GLuint m_shaders[NUM_SHADERS];
         GLuint m_uniforms[NUM_UNIFORMS];
 };
 }}
-
-
-
 #endif /* GRAPHIC_SHADER2_H_ */

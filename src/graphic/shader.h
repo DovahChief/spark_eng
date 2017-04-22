@@ -13,15 +13,15 @@
 
 namespace spark{ namespace graphics{
 
-	class shader{
+	class shader_2{
 	private:
 		GLuint m_shader_id;
 		const char* m_ruta_vertex;
 		const char* m_ruta_fragment;
 
 	public:
-		shader(const char* ruta_vertex, const char* ruta_fragment);
-		~shader();
+		shader_2(const char* ruta_vertex, const char* ruta_fragment);
+		~shader_2();
 
 		void enable() const;
 		void disable() const;

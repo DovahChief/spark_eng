@@ -11,13 +11,16 @@
 #include <cstring>
 #include <cstdio>
 #include <string>
+#include <iostream>
+#include <fstream>
 
 namespace spark {
 
-	class FILEUT{
-	public:
-		static std::string lee_arch(const char* ruta){
-				FILE * arch = fopen(ruta, "rt");
+
+	class F{
+    public:
+        static std::string lee_arch(std::string ruta){
+				FILE * arch = fopen(ruta.c_str() , "rt");
 				fseek(arch , 0 , SEEK_END);
 				unsigned long length = ftell(arch);
 				char* data  = new char[length + 1];
@@ -30,9 +33,13 @@ namespace spark {
 				delete[] data;
 				return (r);
 			}
+			
+			        
+    };
+		
 	};
 
-}
+
 
 
 
