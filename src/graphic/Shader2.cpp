@@ -55,6 +55,13 @@ void shader::update(const transform& tr, const camara& cam){
     
 }
 
+void shader::update(){
+	transform tr;
+	camara cam( glm::vec3(0,0,-10), 70.0f, float(800)/float(450), 0.5f, 100.0f );
+	glm::mat4 model = cam.get_view_projection() * tr.get_model();
+    glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
+}
+
 void shader::update(const transform& tr){
     glm::mat4 model =  tr.get_model();
     glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);

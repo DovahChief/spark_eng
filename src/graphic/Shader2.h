@@ -12,6 +12,7 @@
 #include "transform.h"
 #include "camara.h"
 #include "../utils/file_utils.h"
+#include "../math/mat4.h"
 #include <string>
 #include <GL/glew.h>
 #include <fstream>
@@ -26,6 +27,7 @@ class shader
         virtual ~shader();
         void enable();
         void disable();
+        void update();
         void update(const transform& tr, const camara& cam);
         void update(const transform& tr);
         GLuint get_id(){return (m_shader_id);}
