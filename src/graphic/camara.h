@@ -15,11 +15,11 @@
 namespace spark { namespace graphics {
 class camara{
 public:
-    camara(const glm::vec3& pos, float fov, float aspect, float z_cerca, float z_lejos){
-        this->m_posicion = pos;
+    camara(const glm::vec3& _pos, float _fov, float _aspect, float _z_cerca, float _z_lejos){
+        this->m_posicion = _pos;
         this->m_adelante = glm::vec3(0.0f,0.0f,1.0f);
         this->m_arriba = glm::vec3(0.0f,1.0f,0.0f);
-        this->m_perspect = glm::perspective(fov, aspect, z_cerca, z_lejos);
+        this->m_perspect = glm::perspective(_fov, _aspect, _z_cerca, _z_lejos);
     }
 
     inline mat get_view_projection() const {
@@ -35,9 +35,5 @@ private:
 };
 
 } }
-
-
-
-
 
 #endif /* GRAPHIC_CAMARA_H_ */

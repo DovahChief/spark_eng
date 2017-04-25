@@ -10,25 +10,25 @@
 namespace spark { namespace math{
 
     inline float to_radians(float grados){ return (grados * (M_PI / 180.0f));}
-
+    	//construuctor en cero
     	mat4::mat4(){
             for (int i = 0; i < 4 * 4; i++ )
                     elements[i]= 0.0f;
         }
-
-        mat4::mat4(float diagonal){
+    	//constructor de matriz diagonalizada
+        mat4::mat4(float _diagonal){
             for (int i = 0; i < 4 * 4; i++ )
                 elements[i]= 0.0f;
 
-            elements[0 + 0 * 4] = diagonal;
-            elements[1 + 1 * 4] = diagonal;
-            elements[2 + 2 * 4] = diagonal;
-            elements[3 + 3 * 4] = diagonal;
+            elements[0 + 0 * 4] = _diagonal;
+            elements[1 + 1 * 4] = _diagonal;
+            elements[2 + 2 * 4] = _diagonal;
+            elements[3 + 3 * 4] = _diagonal;
 
         }
-
+        //constrictor de identidad (diagonal en 1)
         mat4 mat4::identity(){ return (mat4(1.0f)); }
-
+        //algoritmo de multiplicacion de matrices
         mat4& mat4::multiply(const mat4& otro){
             for(int i = 0; i < 4; i++){
                 for(int j = 0; j < 4; j++){
@@ -42,10 +42,10 @@ namespace spark { namespace math{
             }
             return (*this);
         }
-
+        //sobrecarga de operadores
         mat4 operator*(mat4 izq, const mat4& right) { return (izq.multiply(right)); }
         mat4& mat4::operator*=(const mat4& right)         { return (multiply(right)); }
-
+        //matriz ortografica
         mat4 mat4::orthographic(float izq, float der, float aba, float arr,float cerca, float lejos)
         {
             mat4 result(1.0);
@@ -60,6 +60,7 @@ namespace spark { namespace math{
 
             return (result);
         }
+        //matriz de perspectiva
         mat4 mat4::perspective(float fov, float aspect_ratio, float cerca, float lejos)
         {
             mat4 result(1.0);
@@ -77,7 +78,7 @@ namespace spark { namespace math{
             return (result);
         }
 
-
+        //matriz de traslacion
         mat4 mat4::tranlation(const vec3& transl) {
             mat4 result(1.0f);
 
@@ -87,7 +88,7 @@ namespace spark { namespace math{
 
             return (result);
         }
-
+        //matriz de escala
         mat4 mat4::scale(const vec3& scale){
             mat4 result(1.0f);
 
@@ -97,7 +98,7 @@ namespace spark { namespace math{
 
             return (result);
         }
-
+        //matriz de rotacion
         mat4 mat4::rotation(float angulo, const vec3& eje){
                 mat4 result(1.0f);
 

@@ -11,8 +11,8 @@
 
 namespace spark{ namespace graphics{
 
- 	 shader_2::shader_2(const char* ruta_vertex,const char* ruta_fragment)
- 	 : m_ruta_fragment (ruta_fragment), m_ruta_vertex(ruta_vertex)
+ 	 shader_2::shader_2(const char* _ruta_vertex,const char* _ruta_fragment)
+ 	 : m_ruta_fragment (_ruta_fragment), m_ruta_vertex(_ruta_vertex)
  	 {
  		 	 m_shader_id = load();
  	 }

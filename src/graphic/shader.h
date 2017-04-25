@@ -20,7 +20,7 @@ namespace spark{ namespace graphics{
 		const char* m_ruta_fragment;
 
 	public:
-		shader_2(const char* ruta_vertex, const char* ruta_fragment);
+		shader_2(const char* _ruta_vertex, const char* _ruta_fragment);
 		~shader_2();
 
 		void enable() const;

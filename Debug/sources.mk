@@ -42,6 +42,7 @@ GEOM_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 src/graphic \
+src/graphic/buffers \
 src/math \
 src/model \
 src \

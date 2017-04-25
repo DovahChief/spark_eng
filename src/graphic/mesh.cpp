@@ -31,41 +31,41 @@ void mesh::init_mesh(const IndexedModel& model){
 
 }
 
-mesh::mesh(const std::string& filename){
-	IndexedModel model = OBJModel(filename).ToIndexedModel();
+mesh::mesh(const std::string& _filename){
+	IndexedModel model = OBJModel(_filename).ToIndexedModel();
 	init_mesh(model);
 }
 
-mesh::mesh(vertex* vertices, unsigned int num_vertices,
-		unsigned int* indices, unsigned int num_indices){
+mesh::mesh(vertex* _vertices, unsigned int _num_vertices,
+		unsigned int* _indices, unsigned int _num_indices){
 		IndexedModel model;
-		for(unsigned int i =0 ; i <num_vertices; i++){
-		        model.positions.push_back(*vertices[i].getPos());
-		        model.texCoords.push_back(*vertices[i].getCoord());
+		for(unsigned int i =0 ; i < _num_vertices; i++){
+		        model.positions.push_back(*_vertices[i].getPos());
+		        model.texCoords.push_back(*_vertices[i].getCoord());
 		    }
 
-		for(unsigned int i = 0; i < num_indices; i++)
-			model.indices.push_back(indices[i]);
+		for(unsigned int i = 0; i < _num_indices; i++)
+			model.indices.push_back(_indices[i]);
 
 		init_mesh(model);
 
 }
 
-mesh::mesh(vertex* vertices, unsigned int num_vertices){
+mesh::mesh(vertex* _vertices, unsigned int _num_vertices){
 	IndexedModel model;
-	for(unsigned int i =0 ; i <num_vertices; i++){
-		model.positions.push_back(*vertices[i].getPos());
-		model.texCoords.push_back(*vertices[i].getCoord());
+	for(unsigned int i =0 ; i < _num_vertices; i++){
+		model.positions.push_back(* _vertices[i].getPos());
+		model.texCoords.push_back(* _vertices[i].getCoord());
 		model.indices.push_back(i);
 	}
 	init_mesh(model);
 }
 
-mesh::mesh(GLfloat vertices[] , unsigned int num_vertices){
+mesh::mesh(GLfloat _vertices[] , unsigned int _num_vertices){
 	IndexedModel model;
-	for(unsigned int i =0 ; i <num_vertices; i+=3){
-		model.positions.push_back(glm::vec3(vertices[i],vertices[i+1],vertices[i+2]));
-		model.texCoords.push_back(glm::vec2(vertices[i],vertices[i+1]));
+	for(unsigned int i =0 ; i <_num_vertices; i+=3){
+		model.positions.push_back(glm::vec3(_vertices[i],_vertices[i+1],_vertices[i+2]));
+		model.texCoords.push_back(glm::vec2(_vertices[i],_vertices[i+1]));
 		model.indices.push_back(i);
 		model.indices.push_back(i+1);
 		model.indices.push_back(i+2);
@@ -77,9 +77,9 @@ mesh::mesh(GLfloat vertices[] , unsigned int num_vertices){
 mesh::~mesh(){ glDeleteVertexArrays(1, &m_vertexArrayObj); }
 
 //dibujar
-void mesh::draw(modo_dibujo m_dib){
+void mesh::draw(modo_dibujo _mod_dib){
     glBindVertexArray(m_vertexArrayObj);
-    glDrawElements(m_dib, m_draw_count, GL_UNSIGNED_INT, 0);
+    glDrawElements(_mod_dib, m_draw_count, GL_UNSIGNED_INT, 0);
     glBindVertexArray(0);
 }
 

@@ -35,7 +35,7 @@ namespace spark{ namespace math{
 
 
         mat4();
-        mat4(float diagonal);
+        mat4(float _diagonal);
 
         static mat4 identity();
 

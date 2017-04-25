@@ -6,13 +6,13 @@
 #include <iostream>
 
 namespace spark { namespace graphics {
-Texture::Texture(const std::string& fileName)
+Texture::Texture(const std::string& _fileName)
 {
 	int width, height, numComponents;
-    unsigned char* data = stbi_load((fileName).c_str(), &width, &height, &numComponents, 4);
+    unsigned char* data = stbi_load((_fileName).c_str(), &width, &height, &numComponents, 4);
 
     if(data == NULL)
-		std::cerr << "Unable to load texture: " << fileName << std::endl;
+		std::cerr << "Unable to load texture: " << _fileName << std::endl;
 
     glGenTextures(1, &m_texture);
     glBindTexture(GL_TEXTURE_2D, m_texture);
@@ -31,10 +31,10 @@ Texture::~Texture()
 	glDeleteTextures(1, &m_texture);
 }
 
-void Texture::Bind(unsigned int unit)
+void Texture::Bind(unsigned int _unit)
 {
-		assert(unit >= 0 && unit <= 31);
-	    glActiveTexture(GL_TEXTURE0 + unit);
+		assert(_unit >= 0 && _unit <= 31);
+	    glActiveTexture(GL_TEXTURE0 + _unit);
 	    glBindTexture(GL_TEXTURE_2D, m_texture);
 }
 

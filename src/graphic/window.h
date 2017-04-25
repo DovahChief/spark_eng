@@ -24,21 +24,21 @@ namespace spark{ namespace graphics{
     class window{
 
     public: //interfaz
-        window(const char* nombre, int ancho, int alto);
+        window(const char* _nombre, int _ancho, int _alto);
         ~window();
         void update () ;
         void clear() const;
         bool cerrado() const;
 
-        inline int get_ancho() const {return m_ancho;}
-        inline int get_alto()  const {return m_alto;}
-        inline void set_alto(int alto) {m_alto = alto;}
-        inline void set_ancho(int ancho) {m_ancho = ancho;}
+        inline int get_ancho() const {return (m_ancho);}
+        inline int get_alto()  const {return (m_alto);}
+        inline void set_alto(int _alto) {m_alto = _alto;}
+        inline void set_ancho(int _ancho) {m_ancho = _ancho;}
 
         //funciones de evento
-        bool is_key_pressed(unsigned int keycode) const;
-        bool is_mouse_btn_pressed(unsigned int boton) const;
-        void mouse_position(double& x, double& y) const;
+        bool is_key_pressed(unsigned int _keycode) const;
+        bool is_mouse_btn_pressed(unsigned int _boton) const;
+        void mouse_position(double& _x, double& _y) const;
 
     private://metodos privados
         bool init();

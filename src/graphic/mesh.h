@@ -58,12 +58,12 @@ private:
 class mesh{
 
     public:
-		mesh(const std::string& filename);
-		mesh(vertex* vertices, unsigned int num_vertices);
-		mesh(GLfloat vertices[], unsigned int num_vertices);
-        mesh(vertex* vertices, unsigned int num_vertices, unsigned int* indices, unsigned int num_indices);
+		mesh(const std::string& _filename);
+		mesh(vertex* _vertices, unsigned int _num_vertices);
+		mesh(GLfloat _vertices[], unsigned int _num_vertices);
+        mesh(vertex* _vertices, unsigned int _num_vertices, unsigned int* _indices, unsigned int _num_indices);
         virtual ~mesh();
-        void draw(modo_dibujo m_dib = triangles);
+        void draw(modo_dibujo _mod_dib = triangles);
 
     private:
         void operator=(const mesh& other);

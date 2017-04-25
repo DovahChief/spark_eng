@@ -8,8 +8,8 @@ namespace spark { namespace graphics {
 class Texture
 {
 public:
-	Texture(const std::string& fileName);
-	void Bind(unsigned int unit = 0);
+	Texture(const std::string& _fileName);
+	void Bind(unsigned int _unit = 0);
 	virtual ~Texture();
 
 private:

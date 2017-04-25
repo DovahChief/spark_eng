@@ -20,10 +20,10 @@ namespace spark { namespace graphics {
 class transform
 {
     public:
-        transform(vec pos = glm::vec3(), vec rot = glm::vec3(), vec scale = glm::vec3(1.0f, 1.0f, 1.0f)) :
-            m_pos(pos),
-            m_rot(rot),
-            m_scale(scale){}
+        transform(vec _pos = glm::vec3(), vec _rot = glm::vec3(), vec _scale = glm::vec3(1.0f, 1.0f, 1.0f)) :
+            m_pos(_pos),
+            m_rot(_rot),
+            m_scale(_scale){}
 
     //getters
     inline vec get_pos(){return (m_pos);}
@@ -31,9 +31,9 @@ class transform
     inline vec get_scale(){return (m_scale);}
 
     //setters
-    inline void set_pos(vec pos){ m_pos = pos;}
-    inline void set_rot(vec rot){ m_rot = rot;}
-    inline void set_scale(vec s){ m_scale = s;}
+    inline void set_pos(vec _pos){ m_pos = _pos;}
+    inline void set_rot(vec _rot){ m_rot = _rot;}
+    inline void set_scale(vec _s){ m_scale = _s;}
 
     //transformacion matricial
     inline mat get_model() const {

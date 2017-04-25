@@ -13,11 +13,11 @@ namespace spark{ namespace graphics{
 static void check_shader_err(GLuint shader, GLuint flag, bool esPrograma, const std::string& msj_err);
 static GLuint load( const std::string& text, GLenum shader_type);
 
-shader::shader(const std::string& file_v, const std::string& file_f){
+shader::shader(const std::string& _file_v, const std::string& _file_f){
     //ctor
     m_shader_id = glCreateProgram();
-    m_shaders[0] = load(F::lee_arch(file_v), GL_VERTEX_SHADER);
-    m_shaders[1] = load(F::lee_arch(file_f), GL_FRAGMENT_SHADER);
+    m_shaders[0] = load(F::lee_arch(_file_v), GL_VERTEX_SHADER);
+    m_shaders[1] = load(F::lee_arch(_file_f), GL_FRAGMENT_SHADER);
 
     for(unsigned int i=0; i<NUM_SHADERS; i++)
         glAttachShader(m_shader_id, m_shaders[i]);
@@ -49,8 +49,8 @@ void shader::disable(){
     glUseProgram(0);
 }
 
-void shader::update(const transform& tr, const camara& cam){
-    glm::mat4 model = cam.get_view_projection() * tr.get_model();
+void shader::update(const transform& _tr, const camara& _cam){
+    glm::mat4 model = _cam.get_view_projection() * _tr.get_model();
     glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
     
 }
@@ -62,8 +62,8 @@ void shader::update(){
     glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
 }
 
-void shader::update(const transform& tr){
-    glm::mat4 model =  tr.get_model();
+void shader::update(const transform& _tr){
+    glm::mat4 model =  _tr.get_model();
     glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &model[0][0]);
     //glUniformMatrix4fv(m_uniforms[TRANSFORM_U], 1, GL_FALSE, &tr.get_model()[0][0]);
 }

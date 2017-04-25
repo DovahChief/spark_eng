@@ -23,13 +23,13 @@ namespace spark{ namespace graphics{
 class shader
 {
     public:
-        shader(const std::string& file_v, const std::string& file_f);
+        shader(const std::string& _file_v, const std::string& _file_f);
         virtual ~shader();
         void enable();
         void disable();
         void update();
-        void update(const transform& tr, const camara& cam);
-        void update(const transform& tr);
+        void update(const transform& _tr, const camara& _cam);
+        void update(const transform& _tr);
         GLuint get_id(){return (m_shader_id);}
 
     private:
