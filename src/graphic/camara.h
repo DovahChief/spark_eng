@@ -25,8 +25,11 @@ public:
     inline mat get_view_projection() const {
         return (m_perspect * glm::lookAt(m_posicion, m_posicion + m_adelante, m_arriba));
     }
+    inline mat updateview(const glm::vec3& _pos){
+    	this->m_posicion = _pos;
+    	return (m_perspect * glm::lookAt(m_posicion, m_posicion + m_adelante, m_arriba));
+    }
 
-protected:
 private:
     glm::mat4 m_perspect;
     glm::vec3 m_posicion;
