@@ -100,28 +100,28 @@ namespace spark { namespace math{
         }
         //matriz de rotacion
         mat4 mat4::rotation(float angulo, const vec3& eje){
-                mat4 result(1.0f);
+        	mat4 result(1.0f);
 
-                float r  = to_radians(angulo);
-                float c = cos(r);
-                float s = sin(r);
-                float omc = 1.0f - c;
+				float r = to_radians(angulo);
+				float c = cos(r);
+				float s = sin(r);
+				float omc = 1.0f - c;
 
-                float x = eje.x;
-                float y = eje.y;
-                float z = eje.z;
-                //COLUMNA 0
-                result.elements[0 + 0 * 4] = x * omc + c;
-                result.elements[1 + 0 * 4] = y * x * omc + z * s;
-                result.elements[2 + 0 * 4] = x * z * omc - y * s;
-                //COLUMNA 1
-                result.elements[0 + 1 * 4] = x * y * omc - z * s;
-                result.elements[1 + 1 * 4] = y * omc + c;
-                result.elements[2 + 1 * 4] = y * z * omc + x * s;
-                //COLUMNA 2
-                result.elements[0 + 2 * 4] = x * z * omc + y * s;
-                result.elements[1 + 2 * 4] = y * z * omc - x * s;
-                result.elements[2 + 2 * 4] = z * omc + c;
+				float x = eje.x;
+				float y = eje.y;
+				float z = eje.z;
+
+				result.elements[0 + 0 * 4] = x * x * omc + c;
+				result.elements[0 + 1 * 4] = y * x * omc + z * s;
+				result.elements[0 + 2 * 4] = x * z * omc - y * s;
+
+				result.elements[1 + 0 * 4] = x * y * omc - z * s;
+				result.elements[1 + 1 * 4] = y * y * omc + c;
+				result.elements[1 + 2 * 4] = y * z * omc + x * s;
+
+				result.elements[2 + 0 * 4] = x * z * omc + y * s;
+				result.elements[2 + 1 * 4] = y * z * omc - x * s;
+				result.elements[2 + 2 * 4] = z * z * omc + c;
 
                 return (result);
 

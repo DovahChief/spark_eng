@@ -61,8 +61,8 @@ namespace spark{ namespace graphics{
             glfwSetMouseButtonCallback(m_ventana, mouse_btn_call);
             glfwSetCursorPosCallback(m_ventana, cursor_pos_call);
             
-            glEnable(GL_CULL_FACE);
-            glCullFace(GL_BACK);
+            //glEnable(GL_CULL_FACE);
+            //glCullFace(GL_BACK);
             
             if(glewInit() != GLEW_OK){
                 std::cout<<"fallo al inicializar GLEW!!!"<<std::endl;
@@ -88,7 +88,7 @@ namespace spark{ namespace graphics{
             return (m_mouse_btn[_boton]);
         }
 
-        void window::mouse_position(double& x, double& y) const{
+        void window::mouse_position(double& x, double& y){
             x = mouse_x;
             y = mouse_y;
         }

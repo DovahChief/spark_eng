@@ -42,43 +42,43 @@ using namespace spark;
 using namespace math;
 
 
-class vertex {
-public:
-    vertex(const vec3 _pos,const vec2 _textCoord){
-        pos.x = _pos.x; pos.y = _pos.y; pos.z = _pos.z;
-        textCoord.x = _textCoord.x; textCoord.y = _textCoord.y;
-    	}
-    glm::vec3* getPos(){return (&pos);}
-    glm::vec2* getCoord(){return (&textCoord);}
-private:
-    glm::vec3 pos;
-    glm::vec2 textCoord;
-};
+	class vertex {
+	public:
+		vertex(const vec3 _pos,const vec2 _textCoord){
+			pos.x = _pos.x; pos.y = _pos.y; pos.z = _pos.z;
+			textCoord.x = _textCoord.x; textCoord.y = _textCoord.y;
+			}
+		glm::vec3* getPos(){return (&pos);}
+		glm::vec2* getCoord(){return (&textCoord);}
+	private:
+		glm::vec3 pos;
+		glm::vec2 textCoord;
+	};
 
-class mesh{
+	class mesh{
 
-    public:
-		mesh(const std::string& _filename);
-		mesh(vertex* _vertices, unsigned int _num_vertices);
-		mesh(GLfloat _vertices[], unsigned int _num_vertices);
-        mesh(vertex* _vertices, unsigned int _num_vertices, unsigned int* _indices, unsigned int _num_indices);
-        virtual ~mesh();
-        void draw(modo_dibujo _mod_dib = triangles);
+		public:
+			mesh(const std::string& _filename);
+			mesh(vertex* _vertices, unsigned int _num_vertices);
+			mesh(GLfloat _vertices[], unsigned int _num_vertices);
+			mesh(vertex* _vertices, unsigned int _num_vertices, unsigned int* _indices, unsigned int _num_indices);
+			virtual ~mesh();
+			void draw(modo_dibujo _mod_dib = triangles);
 
-    private:
-        void operator=(const mesh& other);
-        void init_mesh(const IndexedModel& model);
+		private:
+			void operator=(const mesh& other);
+			void init_mesh(const IndexedModel& model);
 
-        enum {
-        	POSITION_VB,
-			NUM_BUFFERS,
-			INDEX_VB,
-			TEXT_COORD_VB };
+			enum {
+				POSITION_VB,
+				NUM_BUFFERS,
+				INDEX_VB,
+				TEXT_COORD_VB };
 
-        GLuint m_vertexArrayObj;
-        GLuint m_vertexArrayBuff[NUM_BUFFERS];
-        unsigned int m_draw_count;
-};
+			GLuint m_vertexArrayObj;
+			GLuint m_vertexArrayBuff[NUM_BUFFERS];
+			unsigned int m_draw_count;
+	};
 
 }}
 #endif /* MESH_H_ */

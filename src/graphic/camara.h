@@ -13,29 +13,29 @@
 
 
 namespace spark { namespace graphics {
-class camara{
-public:
-    camara(const glm::vec3& _pos, float _fov, float _aspect, float _z_cerca, float _z_lejos){
-        this->m_posicion = _pos;
-        this->m_adelante = glm::vec3(0.0f,0.0f,1.0f);
-        this->m_arriba = glm::vec3(0.0f,1.0f,0.0f);
-        this->m_perspect = glm::perspective(_fov, _aspect, _z_cerca, _z_lejos);
-    }
+	class camara{
+	public:
+		camara(const glm::vec3& _pos, float _fov, float _aspect, float _z_cerca, float _z_lejos){
+			this->m_posicion = _pos;
+			this->m_adelante = glm::vec3(0.0f,0.0f,1.0f);
+			this->m_arriba = glm::vec3(0.0f,1.0f,0.0f);
+			this->m_perspect = glm::perspective(_fov, _aspect, _z_cerca, _z_lejos);
+		}
 
-    inline mat get_view_projection() const {
-        return (m_perspect * glm::lookAt(m_posicion, m_posicion + m_adelante, m_arriba));
-    }
-    inline mat updateview(const glm::vec3& _pos){
-    	this->m_posicion = _pos;
-    	return (m_perspect * glm::lookAt(m_posicion, m_posicion + m_adelante, m_arriba));
-    }
+		inline mat get_view_projection() const {
+			return (m_perspect * glm::lookAt(m_posicion, m_posicion + m_adelante, m_arriba));
+		}
+		inline mat updateview(const glm::vec3& _pos){
+			this->m_posicion = _pos;
+			return (m_perspect * glm::lookAt(m_posicion, m_posicion + m_adelante, m_arriba));
+		}
 
-private:
-    glm::mat4 m_perspect;
-    glm::vec3 m_posicion;
-    glm::vec3 m_adelante;
-    glm::vec3 m_arriba;
-};
+	private:
+		glm::mat4 m_perspect;
+		glm::vec3 m_posicion;
+		glm::vec3 m_adelante;
+		glm::vec3 m_arriba;
+	};
 
 } }
 

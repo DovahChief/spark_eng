@@ -9,13 +9,24 @@
 
 namespace spark { namespace graphics {
 
-buffer::buffer() {
-	// TODO Auto-generated constructor stub
+	buffer::buffer(GLfloat* _data, GLsizei _count, GLuint _comp_count)
+		:m_Component_count(_comp_count)
+		{
+			glGenBuffers(1, &m_buffer_ID);
+			glBindBuffer(GL_ARRAY_BUFFER, m_buffer_ID);
+			glBufferData(GL_ARRAY_BUFFER, _count* sizeof(GLfloat), _data, GL_STATIC_DRAW);
+			glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-}
+		}
 
-buffer::~buffer() {
-	// TODO Auto-generated destructor stub
-}
+	void buffer::bind() const {
+		glBindBuffer(GL_ARRAY_BUFFER, m_buffer_ID);
+	}
+
+	void buffer::unbind() const {
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+	}
+
+
 } /* namespace graphics */
 } /* namespace spark */

@@ -38,7 +38,7 @@ namespace spark{ namespace graphics{
         //funciones de evento
         bool is_key_pressed(unsigned int _keycode) const;
         bool is_mouse_btn_pressed(unsigned int _boton) const;
-        void mouse_position(double& _x, double& _y) const;
+        void mouse_position(double& _x, double& _y);
 
     private://metodos privados
         bool init();
