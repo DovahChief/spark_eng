@@ -46,7 +46,7 @@ namespace spark{ namespace math{
         static mat4 orthographic(float izq, float der, float aba, float arr, float cerca, float lejos);
         static mat4 perspective(float fov, float aspect_ratio, float cerca, float lejos);
 
-        static mat4 tranlation(const vec3& transl);
+        static mat4 translation(const vec3& transl);
         static mat4 scale(const vec3& scale);
         static mat4 rotation(float angulo, const vec3& eje);
 

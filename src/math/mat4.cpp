@@ -79,7 +79,7 @@ namespace spark { namespace math{
         }
 
         //matriz de traslacion
-        mat4 mat4::tranlation(const vec3& transl) {
+        mat4 mat4::translation(const vec3& transl) {
             mat4 result(1.0f);
 
             result.elements[0 + 3 * 4] = transl.x;
