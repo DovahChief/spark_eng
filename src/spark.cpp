@@ -4,8 +4,7 @@
  * email : pepelimonta@gmail.com
  * */
 
-#include "graphic.h"
-#include "maths.h"
+#include "includes.h"
 
 #include <GL/glew.h>
 
