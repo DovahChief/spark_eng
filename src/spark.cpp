@@ -14,7 +14,7 @@ int main(){
 	    using namespace graphics;
 	    using namespace math;
 
-	    window w("SPARK", 800, 450);
+	    window w("SPARK-R", 800, 450);
 	    //glClearColor(0.0.f, 0.0f, 0.4f, 1.0f);
 
 /*
@@ -46,14 +46,14 @@ int main(){
 		};
 
 
-	    vertexArray sprite1, sprite2;
+	    vertexArray sprite1 {}, sprite2 {};
 	    indexBuffer ibo(indices, 6);
 
-	    sprite1.addBuffer(new buffer(vert, 4*3, 3), 0);
-	    sprite1.addBuffer(new buffer(colorsA, 4*4, 4), 1);
+	    sprite1.addBuffer(new buffer { vert, 4 * 3, 3 }, 0);
+	    sprite1.addBuffer(new buffer { colorsA, 4 * 4, 4 }, 1);
 
-	    sprite2.addBuffer(new buffer(vert, 4*3, 3), 0);
-	    sprite2.addBuffer(new buffer(colorsB, 4*4, 4), 1);
+	    sprite2.addBuffer(new buffer { vert, 4 * 3, 3 }, 0);
+	    sprite2.addBuffer(new buffer { colorsB, 4 * 4, 4 }, 1);
 
 
 	    shader shad("/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
@@ -72,7 +72,7 @@ int main(){
 	    while(!w.cerrado()){
 	        w.clear();
 
-	        double x , y;
+	        double x {}, y {};
 	        w.mouse_position(x, y);
 	        shad.setUniform2f("light_pos", vec2((float) ( x* 10.0f/800.0f) + 2, (float) (9.0f - (y * 9.0f/450.0f)) ));
 

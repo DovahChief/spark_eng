@@ -40,7 +40,7 @@ namespace spark{ namespace graphics{
             for(int i = 0; i < MAX_BUTTONS; i++)    m_mouse_btn[i] = false;
         }
 
-        //init window checa que se inicialice todo bien
+        //init window checa que se inicialice  bien
         bool window::init(){
 
             if(!glfwInit()){

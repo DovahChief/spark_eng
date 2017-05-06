@@ -32,7 +32,7 @@ namespace spark { namespace math{
         mat4& mat4::multiply(const mat4& otro){
             for(int i = 0; i < 4; i++){
                 for(int j = 0; j < 4; j++){
-                    float sum = 0.0f;
+                	float sum { 0.0f };
                     for(int k = 0; k < 4; k++){
                         //element [ fila + columna * 4 ]
                         sum += elements[j + k * 4] * otro.elements[k + i * 4];
@@ -64,10 +64,10 @@ namespace spark { namespace math{
         mat4 mat4::perspective(float fov, float aspect_ratio, float cerca, float lejos)
         {
             mat4 result(1.0);
-            float q = 1.0f/tan(to_radians(0.5 * fov));
-            float a = q / aspect_ratio;
-            float b = (cerca + lejos)/(cerca - lejos);
-            float c = (2.0f * cerca * lejos)/(cerca - lejos);
+            float q { 1.0f / tan(to_radians(0.5 * fov)) };
+            float a { q / aspect_ratio };
+            float b { (cerca + lejos) / (cerca - lejos) };
+            float c { (2.0f * cerca * lejos) / (cerca - lejos) };
 
             result.elements[0 + 0 * 4] = a;
             result.elements[1 + 1 * 4] = q;
@@ -105,7 +105,7 @@ namespace spark { namespace math{
 				float r = to_radians(angulo);
 				float c = cos(r);
 				float s = sin(r);
-				float omc = 1.0f - c;
+				float omc { 1.0f - c };
 
 				float x = eje.x;
 				float y = eje.y;

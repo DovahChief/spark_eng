@@ -20,8 +20,6 @@ namespace spark{ namespace math{
 
     struct vec4{
         float x , y, z, w;
-
-        vec4() = default;
         vec4(const float& _x, const float& _y,const float& _z, const float& _w );
 
         vec4& add(const vec4& otro);

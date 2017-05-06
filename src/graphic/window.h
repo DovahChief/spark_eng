@@ -18,8 +18,8 @@
 
 namespace spark{ namespace graphics{
 
-#define MAX_KEYS    1024
-#define MAX_BUTTONS 32
+constexpr auto MAX_KEYS = 1024;
+constexpr auto MAX_BUTTONS = 32;
 
     class window{
 

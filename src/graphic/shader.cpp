@@ -84,8 +84,8 @@ namespace spark{ namespace graphics{
 
 		if(shader == 0) std::cerr<<"Error: fallo en creacion del shader "<<std::endl;
 
-		const GLchar* shader_source_str[1];
-		GLint shader_source_ln[1];
+		const GLchar*shader_source_str[1] { };
+		GLint shader_source_ln[1] { };
 
 		shader_source_str[0] = text.c_str();
 		shader_source_ln[0] = text.length();
