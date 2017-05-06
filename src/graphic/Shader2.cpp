@@ -23,7 +23,8 @@ namespace spark{ namespace graphics{
 			glAttachShader(m_shader_id, m_shaders[i]);
 
 		glBindAttribLocation(m_shader_id, 0, "position");
-		glBindAttribLocation(m_shader_id, 1, "textCoord");
+		//glBindAttribLocation(m_shader_id, 1, "textCoord");
+		glBindAttribLocation(m_shader_id, 1, "color");
 
 
 		glLinkProgram(m_shader_id);
@@ -33,8 +34,7 @@ namespace spark{ namespace graphics{
 		check_shader_err(m_shader_id, GL_VALIDATE_STATUS, true, "Error en validando programa");
 
 		m_uniforms[TRANSFORM_U] = glGetUniformLocation(m_shader_id, "transform");
-		m_uniforms[PR_U] = glGetUniformLocation(m_shader_id, "pr_mat");
-		m_uniforms[VW_U] = glGetUniformLocation(m_shader_id, "vw_mat");
+
 	}
 	shader::~shader(){
 		//dtor

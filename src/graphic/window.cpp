@@ -100,8 +100,13 @@ namespace spark{ namespace graphics{
 
         //saca los eventos y actualiza la ventana
         void window::update() {
+
+        	GLenum engine_error = glGetError();
+        	if(engine_error != GL_NO_ERROR)
+        		std::cout<<"Opengl Error : "<<engine_error<<"\n";
+
             glfwPollEvents();
-            glfwGetFramebufferSize(m_ventana, &m_ancho, &m_alto);
+            //glfwGetFramebufferSize(m_ventana, &m_ancho, &m_alto);
             glfwSwapBuffers(m_ventana);
         }
 

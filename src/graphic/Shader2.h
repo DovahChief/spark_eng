@@ -49,8 +49,6 @@ namespace spark{ namespace graphics{
 			static const unsigned int NUM_SHADERS = 2;
 			enum {
 				TRANSFORM_U,
-				PR_U,
-				VW_U,
 				NUM_UNIFORMS
 			};
 
