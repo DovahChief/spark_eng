@@ -6,7 +6,6 @@
 
 #include "includes.h"
 
-#include <GL/glew.h>
 
 int main(){
 
@@ -25,8 +24,7 @@ int main(){
 	    renderable2D sprite(math::vec3(2,2,0), math::vec2(4,4), math::vec4(1.0, 0.0, 1, 0), shad);
 	    renderable2D sprite2(math::vec3(7,1,0), math::vec2(2,4), math::vec4(0.4, 0.0, 1, 0), shad);
 
-	    simple2DRenderer renderer { };
-
+	    simple2DRenderer renderer {};//clion
 
 	    while(!w.cerrado()){
 	        w.clear();
