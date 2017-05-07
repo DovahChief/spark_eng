@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef GRAPHIC_RENDERABLE2D_H_
-#define GRAPHIC_RENDERABLE2D_H_
+#pragma once
 
 #include "shader.h"
 
@@ -75,4 +74,3 @@ namespace spark{ namespace graphics{
 } /* namespace graphics */
 } /* namespace spark */
 
-#endif /* GRAPHIC_RENDERABLE2D_H_ */

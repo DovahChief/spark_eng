@@ -5,9 +5,7 @@
  *      Author: jose
  */
 
-#ifndef MATH_VEC2_H_
-#define MATH_VEC2_H_
-
+#pragma once
 #include <iostream>
 
 /*
@@ -49,5 +47,3 @@ namespace spark{ namespace math{
 
 } }
 
-
-#endif /* MATH_VEC2_H_ */

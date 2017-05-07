@@ -4,9 +4,7 @@
  *  Created on: 06/05/2017
  *      Author: jose
  */
-
-#ifndef GRAPHIC_RENDERER2D_H_
-#define GRAPHIC_RENDERER2D_H_
+#pragma once
 
 #include <GL/glew.h>
 #include "../math/maths.h"
@@ -24,5 +22,3 @@ namespace spark { namespace graphics {
 
 } /* namespace graphics */
 } /* namespace spark */
-
-#endif /* GRAPHIC_RENDERER2D_H_ */

@@ -5,9 +5,7 @@
  *      Author: jose
  */
 
-#ifndef MATH_MAT4_H_
-#define MATH_MAT4_H_
-
+#pragma once
 #include "vec3.h"
 #include "vec4.h"
 #include <math.h>
@@ -54,4 +52,3 @@ namespace spark{ namespace math{
 
 }}
 
-#endif /* MATH_MAT4_H_ */

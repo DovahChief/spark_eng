@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef GRAPHIC_SIMPLE2DRENDERER_H_
-#define GRAPHIC_SIMPLE2DRENDERER_H_
+#pragma once
 
 #include "renderer2D.h"
 #include "../math/maths.h"
@@ -31,4 +30,4 @@ namespace spark { namespace graphics {
 } /* namespace graphics */
 } /* namespace spark */
 
-#endif /* GRAPHIC_SIMPLE2DRENDERER_H_ */
+

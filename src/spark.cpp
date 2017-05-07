@@ -2,6 +2,7 @@
  * Motor GRafico con OPENGL y GLFW
  * creado por Jose Antonio Limonta
  * email : pepelimonta@gmail.com
+ *
  * */
 
 #include "includes.h"
@@ -26,6 +27,7 @@ int main(){
 
 	    simple2DRenderer renderer {};//clion
 
+    //todo batch renderer
 	    while(!w.cerrado()){
 	        w.clear();
 

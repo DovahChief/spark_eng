@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef GRAPHIC_WINDOW_H_
-#define GRAPHIC_WINDOW_H_
+#pragma once
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -63,7 +62,3 @@ constexpr auto MAX_BUTTONS = 32;
     }
 }
 
-
-
-
-#endif /* GRAPHIC_WINDOW_H_ */

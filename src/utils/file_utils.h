@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef UTILS_FILE_UTILS_H_
-#define UTILS_FILE_UTILS_H_
+#pragma once
 
 #include <cstring>
 #include <cstdio>
@@ -40,8 +39,3 @@ namespace spark {
 		
 	};
 
-
-
-
-
-#endif /* UTILS_FILE_UTILS_H_ */

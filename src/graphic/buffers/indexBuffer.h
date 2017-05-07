@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef GRAPHIC_BUFFERS_INDEXBUFFER_H_
-#define GRAPHIC_BUFFERS_INDEXBUFFER_H_
+#pragma once
 
 #include <GL/glew.h>
 
@@ -30,4 +29,3 @@ namespace spark { namespace graphics {
 } /* namespace graphics */
 } /* namespace spark */
 
-#endif /* GRAPHIC_BUFFERS_INDEXBUFFER_H_ */

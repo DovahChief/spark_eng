@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef MATHS_H_
-#define MATHS_H_
+#pragma once
 
 
 #include "vec2.h"
@@ -15,5 +14,3 @@
 #include "mat4.h"
 
 
-
-#endif /* MATHS_H_ */

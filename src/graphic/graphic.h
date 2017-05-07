@@ -1,5 +1,4 @@
-#ifndef GRAPHIC_H_INCLUDED
-#define GRAPHIC_H_INCLUDED
+#pragma once
 
 #include "window.h"
 #include "shader.h"
@@ -12,4 +11,4 @@
 #include "buffers/vertexArray.h"
 
 
-#endif // MATH_H_INCLUDED
+

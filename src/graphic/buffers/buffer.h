@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef GRAPHIC_BUFFERS_BUFFER_H_
-#define GRAPHIC_BUFFERS_BUFFER_H_
+#pragma once
 
 #include <GL/glew.h>
 
@@ -28,4 +27,4 @@ namespace spark { namespace graphics {
 } /* namespace graphics */
 } /* namespace spark */
 
-#endif /* GRAPHIC_BUFFERS_BUFFER_H_ */
+

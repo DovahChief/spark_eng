@@ -1,6 +1,4 @@
-#ifndef vertexArray_H
-#define vertexArray_H
-
+#pragma once
 #include <GL/glew.h>
 #include <vector>
 #include "buffer.h"
@@ -27,4 +25,4 @@ namespace spark { namespace graphics{
 
 } /* namespace graphics */
 } /* namespace spark */
-#endif
+

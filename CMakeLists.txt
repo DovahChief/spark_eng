@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.7)
 project(spark)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 set(SOURCE_FILES
         src/graphic/buffers/buffer.cpp
@@ -32,9 +32,9 @@ set(SOURCE_FILES
         src/shader/basicShader.vert
         src/utils/file_utils.h
         src/includes.h
-        src/spark.cpp)
-
-
+        src/spark.cpp
+        src/graphic/batchRender.cpp
+        src/graphic/batchRender.h)
 
 add_executable(spark ${SOURCE_FILES})
 target_link_libraries( spark GL GLEW glfw pthread)

@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef GRAPHIC_SHADER2_H_
-#define GRAPHIC_SHADER2_H_
+#pragma once
 
 
 #include "../utils/file_utils.h"
@@ -54,4 +53,4 @@ namespace spark{ namespace graphics{
 
 	};
 }}
-#endif /* GRAPHIC_SHADER2_H_ */
+
