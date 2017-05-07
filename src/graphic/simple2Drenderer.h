@@ -13,21 +13,22 @@
 #include <deque>
 #include <GL/glew.h>
 
-namespace spark { namespace graphics {
+namespace spark {
+	namespace graphics {
 
-	class simple2DRenderer: public renderer2D {
+		class simple2DRenderer: public renderer2D {
 
-	private:
-		std::deque<const renderable2D*> m_renderQue;
+		private:
+			std::deque<const renderable2D*> m_renderQue;
 
-	public:
-			virtual void submit(const renderable2D* renderable) override;
-			virtual void flush() override;
+		public:
+				virtual void submit(const renderable2D* renderable) override;
+				virtual void flush() override;
 
 
-	};
+		};
 
-} /* namespace graphics */
+	} /* namespace graphics */
 } /* namespace spark */
 
 

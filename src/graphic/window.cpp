@@ -18,7 +18,8 @@
 
 */
 
-namespace spark{ namespace graphics{
+namespace spark{
+    namespace graphics{
 
 
         //helper fun
@@ -139,9 +140,8 @@ namespace spark{ namespace graphics{
         	glViewport(0,0, ancho, alto);
         }
 
-    }
-
-}
+    }/* namespace graphics */
+}/* namespace spark */
 
 
 

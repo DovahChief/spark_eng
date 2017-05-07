@@ -9,23 +9,25 @@
 
 #include <GL/glew.h>
 
-namespace spark { namespace graphics {
+namespace spark {
+	namespace graphics {
 
-	class indexBuffer {
-	private:
-		GLuint m_Buffer_id;
-		GLuint m_count;
+		class indexBuffer {
+		private:
+			GLuint m_Buffer_id;
+			GLuint m_count;
 
-	public:
-		indexBuffer(GLushort* _data, GLsizei _count);
+		public:
+			indexBuffer(GLushort* _data, GLsizei _count);
+			~indexBuffer();
 
-		void bind() const;
-		void unbind() const;
+			void bind() const;
+			void unbind() const;
 
-		inline GLuint get_cont() const {return (m_count);}
+			inline GLuint get_cont() const {return (m_count);}
 
 
-	};
-} /* namespace graphics */
+		};
+	} /* namespace graphics */
 } /* namespace spark */
 

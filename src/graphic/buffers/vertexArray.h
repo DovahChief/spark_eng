@@ -4,25 +4,25 @@
 #include "buffer.h"
 
 
-namespace spark { namespace graphics{
+namespace spark {
+	namespace graphics{
 
-	class vertexArray{
+		class vertexArray{
 
-	private:
-		GLuint m_arrayID;
-		std::vector<buffer*> m_Buffers;
+		private:
+			GLuint m_arrayID;
+			std::vector<buffer*> m_Buffers;
 
-	public:
-		vertexArray();
-		~vertexArray();
+		public:
+			vertexArray();
+			~vertexArray();
 
-		void addBuffer(buffer* _buffer, GLuint _index);
-		void bind() const;
-		void unbind() const;
+			void addBuffer(buffer* _buffer, GLuint _index);
+			void bind() const;
+			void unbind() const;
 
-	};
+		};
 
-
-} /* namespace graphics */
+	} /* namespace graphics */
 } /* namespace spark */
 

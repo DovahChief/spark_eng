@@ -5,15 +5,26 @@
 #include "batchRender.h"
 
 
-namespace spark { namespace graphics {
+namespace spark {
+    namespace graphics {
 
-    void batchRender::submit(const renderable2D *renderable) {
+        batchRender::batchRender() {
+            init();
+        }
 
-    }
+        batchRender::~batchRender() {
+            delete m_IBO;
+        }
 
-    void batchRender::flush() {
+        void batchRender::submit(const renderable2D *renderable) {
 
-    }
+        }
+
+        void batchRender::flush() {
+
+        }
+
+
 
     } /* namespace graphics */
 } /* namespace spark */

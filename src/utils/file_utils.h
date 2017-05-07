@@ -32,10 +32,8 @@ namespace spark {
 				std::string r(data);
 				delete[] data;
 				return (r);
-			}
-			
-			        
+		}
     };
 		
-	};
+}/* namespace spark */
 

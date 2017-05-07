@@ -10,15 +10,16 @@
 #include "../math/maths.h"
 #include "renderable2D.h"
 
-namespace spark { namespace graphics {
+namespace spark {
+	namespace graphics {
 
-	class renderer2D {
+		class renderer2D {
 
-	protected:
-		virtual void submit(const renderable2D* renderable) = 0;
-		virtual void flush() = 0;
+		protected:
+			virtual void submit(const renderable2D* renderable) = 0;
+			virtual void flush() = 0;
 
-	};
+		};
 
-} /* namespace graphics */
+	} /* namespace graphics */
 } /* namespace spark */
