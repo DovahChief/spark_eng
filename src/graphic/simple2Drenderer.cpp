@@ -12,22 +12,22 @@ namespace spark {
 
 
 		void simple2DRenderer::submit(const renderable2D* renderable){
-			m_renderQue.push_back(renderable);
+			m_renderQue.push_back((static_sprite*)renderable);
 		}
 
 		void simple2DRenderer::flush(){
 			while(!(m_renderQue.empty()))
 			{
-				const renderable2D* renderable = m_renderQue.front();
-				renderable->getVAO()->bind();
-				renderable->getIBO()->bind();
+				const static_sprite* sprite = m_renderQue.front();
+				sprite->getVAO()->bind();
+				sprite->getIBO()->bind();
 
-				renderable->getShader().
-						setUniformMAT4("ml_mat",math::mat4::translation(renderable->get_position()));
-				glDrawElements(GL_TRIANGLES, renderable->getIBO()->get_cont(), GL_UNSIGNED_SHORT, 0);
+				sprite->getShader().
+						setUniformMAT4("ml_mat",math::mat4::translation(sprite->get_position()));
+				glDrawElements(GL_TRIANGLES, sprite->getIBO()->get_cont(), GL_UNSIGNED_SHORT, 0);
 
-				renderable->getIBO()->unbind();
-				renderable->getVAO()->unbind();
+				sprite->getIBO()->unbind();
+				sprite->getVAO()->unbind();
 
 				m_renderQue.pop_front();
 			}

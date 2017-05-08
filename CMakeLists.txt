@@ -34,7 +34,7 @@ set(SOURCE_FILES
         src/includes.h
         src/spark.cpp
         src/graphic/batchRender.cpp
-        src/graphic/batchRender.h)
+        src/graphic/batchRender.h src/graphic/sprite.cpp src/graphic/sprite.h src/graphic/static_sprite.cpp src/graphic/static_sprite.h)
 
 add_executable(spark ${SOURCE_FILES})
 target_link_libraries( spark GL GLEW glfw pthread)

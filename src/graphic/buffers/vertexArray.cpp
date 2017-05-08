@@ -17,6 +17,8 @@ namespace spark {
 		vertexArray::~vertexArray(){
 			for(unsigned int i = 0; i < m_Buffers.size(); i++)
 				delete m_Buffers[i];
+
+			glDeleteVertexArrays(1, &m_arrayID);
 		}
 
 		void vertexArray::addBuffer(buffer* _buffer,GLuint _index){

@@ -6,9 +6,8 @@
 #define SPARK_BATCHRENDER_H
 
 #include "renderer2D.h"
-#include "buffers/vertexArray.h"
 #include "buffers/indexBuffer.h"
-
+#include <GL/glew.h>
 
 namespace spark {
     namespace graphics {
@@ -19,10 +18,13 @@ namespace spark {
         #define RENDERER_BUFFER_SIZE    RENDERER_SPRITE_SIZE * RENDERER_MAX_SPRITES
         #define RENDERER_INDICE_SIZE    RENDERER_MAX_SPRITES * 6
 
+        #define SHADER_VERTEX_INDEX 0
+        #define SHADER_COLOR_INDEX 1
+
         class batchRender : public renderer2D{
 
         private:
-            vertexArray m_VAO; //vertex array object
+            GLuint m_VAO; //vertex array object
             indexBuffer* m_IBO;
             GLuint m_VBO;
             GLsizei m_IndexCount;

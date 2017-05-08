@@ -10,7 +10,7 @@
 #include "vec4.h"
 #include <math.h>
 /*
-    usa coumn major ordering para el arreglo
+    usa column major ordering para el arreglo
     se accesa con:
     element [ fila + columna * <ancho> ]
 

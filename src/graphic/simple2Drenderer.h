@@ -8,6 +8,7 @@
 #pragma once
 
 #include "renderer2D.h"
+#include "static_sprite.h"
 #include "../math/maths.h"
 
 #include <deque>
@@ -19,7 +20,7 @@ namespace spark {
 		class simple2DRenderer: public renderer2D {
 
 		private:
-			std::deque<const renderable2D*> m_renderQue;
+			std::deque<const static_sprite *> m_renderQue;
 
 		public:
 				virtual void submit(const renderable2D* renderable) override;

@@ -24,9 +24,8 @@ namespace spark{
 				glAttachShader(m_shader_id, m_shaders[i]);
 
 			glBindAttribLocation(m_shader_id, 0, "position");
-			//glBindAttribLocation(m_shader_id, 1, "textCoord");
 			glBindAttribLocation(m_shader_id, 1, "color");
-
+			//todo: agregar 1 para normal, 2 para terxture_coord y 3 para texture_id
 
 			glLinkProgram(m_shader_id);
 			check_shader_err(m_shader_id, GL_LINK_STATUS, true, "Error en ligado de programa");
