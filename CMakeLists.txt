@@ -11,12 +11,12 @@ set(SOURCE_FILES
         src/graphic/buffers/vertexArray.cpp
         src/graphic/buffers/vertexArray.h
         src/graphic/graphic.h
-        src/graphic/renderable2D.h
-        src/graphic/renderer2D.h
+        src/graphic/SpriteRenderer/renderable2D.h
+        src/graphic/SpriteRenderer/renderer2D.h
         src/graphic/shader.cpp
         src/graphic/shader.h
-        src/graphic/simple2Drenderer.cpp
-        src/graphic/simple2Drenderer.h
+        src/graphic/SpriteRenderer/simple2Drenderer.cpp
+        src/graphic/SpriteRenderer/simple2Drenderer.h
         src/graphic/window.cpp
         src/graphic/window.h
         src/math/mat4.cpp
@@ -33,8 +33,13 @@ set(SOURCE_FILES
         src/utils/file_utils.h
         src/includes.h
         src/spark.cpp
-        src/graphic/batchRender.cpp
-        src/graphic/batchRender.h src/graphic/sprite.cpp src/graphic/sprite.h src/graphic/static_sprite.cpp src/graphic/static_sprite.h)
+        src/graphic/SpriteRenderer/batchRender.cpp
+        src/graphic/SpriteRenderer/batchRender.h
+        src/graphic/SpriteRenderer/sprite.cpp
+        src/graphic/SpriteRenderer/sprite.h
+        src/graphic/SpriteRenderer/static_sprite.cpp
+        src/graphic/SpriteRenderer/static_sprite.h
+        )
 
 add_executable(spark ${SOURCE_FILES})
 target_link_libraries( spark GL GLEW glfw pthread)

@@ -9,7 +9,7 @@
 
 #include "renderer2D.h"
 #include "static_sprite.h"
-#include "../math/maths.h"
+#include "../../math/maths.h"
 
 #include <deque>
 #include <GL/glew.h>

@@ -7,13 +7,13 @@
 
 #pragma once
 
-#include "shader.h"
+#include "../shader.h"
 
-#include "buffers/buffer.h"
-#include "buffers/indexBuffer.h"
-#include "buffers/vertexArray.h"
+#include "../buffers/buffer.h"
+#include "../buffers/indexBuffer.h"
+#include "../buffers/vertexArray.h"
 
-#include "../math/maths.h"
+#include "../../math/maths.h"
 
 
 namespace spark{

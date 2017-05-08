@@ -7,7 +7,7 @@
 #pragma once
 
 #include <GL/glew.h>
-#include "../math/maths.h"
+#include "../../math/maths.h"
 #include "renderable2D.h"
 
 namespace spark {
