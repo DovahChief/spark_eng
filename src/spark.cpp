@@ -23,7 +23,7 @@ int main(){
 	    shad.setUniformMAT4("pr_mat", ortho);
 
 	    static_sprite sprite(5,5, 4,4, math::vec4(1.0, 0.0, 1, 0), shad);
-	    static_sprite sprite2(7,1,2,4, math::vec4(0.4, 0.0, 1, 0), shad);
+	    static_sprite sprite2(7,1,2,3, math::vec4(0.4, 0.0, 1, 0), shad);
 
 	    simple2DRenderer renderer {};//clion
 

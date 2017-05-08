@@ -7,6 +7,7 @@
 #include "simple2Drenderer.h"
 #include "sprite.h"
 #include "static_sprite.h"
+#include "batchRender.h"
 
 #include "buffers/buffer.h"
 #include "buffers/indexBuffer.h"

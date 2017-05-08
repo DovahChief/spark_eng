@@ -2,8 +2,7 @@
 // Created by jose on 6/05/17.
 //
 
-#ifndef SPARK_BATCHRENDER_H
-#define SPARK_BATCHRENDER_H
+#pragma once
 
 #include "renderer2D.h"
 #include "buffers/indexBuffer.h"
@@ -28,11 +27,14 @@ namespace spark {
             indexBuffer* m_IBO;
             GLuint m_VBO;
             GLsizei m_IndexCount;
+            VertexData* m_buffer;
         public:
             batchRender();
             ~batchRender();
 
+            void begin();
             virtual void submit(const renderable2D* renderable) override;
+            void end();
             virtual void flush() override;
 
         private:
@@ -43,4 +45,4 @@ namespace spark {
     } /* namespace graphics */
 } /* namespace spark */
 
-#endif //SPARK_BATCHRENDER_H
+

@@ -17,12 +17,51 @@ namespace spark {
             glDeleteBuffers(1, &m_VBO);
         }
 
+        void batchRender::begin() {
+            glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
+            m_buffer = (VertexData*) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+        }
+
         void batchRender::submit(const renderable2D *renderable) {
 
+            const math::vec3& position = renderable->get_position();
+            const math::vec4& color = renderable->get_color();
+            const math::vec2& size = renderable->get_size();
+
+            m_buffer->vertex = position;
+            m_buffer->color = color;
+            m_buffer++;
+
+            m_buffer->vertex = math::vec3(position.x, position.y +size.y, position.z );
+            m_buffer->color = color;
+            m_buffer++;
+
+            m_buffer->vertex = math::vec3(position.x + size.x, position.y +size.y, position.z );
+            m_buffer->color = color;
+            m_buffer++;
+
+            m_buffer->vertex = math::vec3(position.x + size.x, position.y, position.z );
+            m_buffer->color = renderable->get_color();
+            m_buffer++;
+
+            m_IndexCount += 6;
+        }
+
+        void batchRender::end() {
+            glUnmapBuffer(GL_ARRAY_BUFFER);
+            glBindBuffer(GL_ARRAY_BUFFER, 0);
         }
 
         void batchRender::flush() {
+            glBindVertexArray(m_VAO);
+            m_IBO->bind();
 
+            glDrawElements(GL_TRIANGLES, m_IndexCount, GL_UNSIGNED_SHORT, NULL);
+
+            m_IBO->unbind();
+            glBindVertexArray(0);
+
+            m_IndexCount = 0;
         }
 
         void batchRender::init() {
@@ -41,7 +80,7 @@ namespace spark {
                                   RENDERER_VERTEX_SIZE, (const GLvoid*) 0);
 
             glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_FLOAT, GL_FALSE,
-                                  RENDERER_VERTEX_SIZE, (const GLvoid*)(3*GL_FLOAT));
+                                  RENDERER_VERTEX_SIZE, (const GLvoid*)(3* sizeof(GLfloat)));
 
             glBindBuffer(GL_ARRAY_BUFFER, 0);
 

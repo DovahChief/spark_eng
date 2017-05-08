@@ -41,8 +41,8 @@ namespace spark{
 		public:
 
 			inline const math::vec3& get_position() const {return (m_position);}
-			inline const math::vec2& get_size(){return (m_size);}
-			inline const math::vec4& get_color(){return (m_color);}
+			inline const math::vec2& get_size()const  {return (m_size);}
+			inline const math::vec4& get_color() const {return (m_color);}
 		};
 
 	} /* namespace graphics */
