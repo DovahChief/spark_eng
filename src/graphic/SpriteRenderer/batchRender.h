@@ -11,14 +11,14 @@
 namespace spark {
     namespace graphics {
 
-        #define RENDERER_MAX_SPRITES    10000
-        #define RENDERER_VERTEX_SIZE    sizeof(VertexData)
-        #define RENDERER_SPRITE_SIZE    RENDERER_VERTEX_SIZE * 4
-        #define RENDERER_BUFFER_SIZE    RENDERER_SPRITE_SIZE * RENDERER_MAX_SPRITES
-        #define RENDERER_INDICE_SIZE    RENDERER_MAX_SPRITES * 6
+        constexpr auto RENDERER_MAX_SPRITES = 10000;
+        constexpr auto RENDERER_VERTEX_SIZE = sizeof(VertexData);
+        constexpr auto RENDERER_SPRITE_SIZE = RENDERER_VERTEX_SIZE * 4;
+        constexpr auto RENDERER_BUFFER_SIZE = RENDERER_SPRITE_SIZE * RENDERER_MAX_SPRITES;
+        constexpr auto RENDERER_INDICE_SIZE = RENDERER_MAX_SPRITES * 6;
 
-        #define SHADER_VERTEX_INDEX 0
-        #define SHADER_COLOR_INDEX 1
+        constexpr auto SHADER_VERTEX_INDEX = 0;
+        constexpr auto SHADER_COLOR_INDEX = 1;
 
         class batchRender : public renderer2D{
 

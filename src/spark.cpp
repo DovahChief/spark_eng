@@ -34,7 +34,7 @@ int main(){
 
 
 
-    std::vector<renderable2D*> sprites;
+    std::vector<renderable2D*> sprites { };
     srand(time(NULL));
 
     for (float y = 0; y < 9.0f; y++) {

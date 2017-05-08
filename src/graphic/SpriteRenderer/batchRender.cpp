@@ -84,8 +84,8 @@ namespace spark {
 
             glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-            GLushort*  indices= new GLushort[RENDERER_INDICE_SIZE];
-            int offset = 0;
+            GLushort* indices = new GLushort[RENDERER_INDICE_SIZE] { };
+            int offset { 0 };
 
             for (int i = 0; i < RENDERER_INDICE_SIZE ; i+=6) {
                 indices[i]      = offset + 0;
@@ -98,7 +98,7 @@ namespace spark {
                 offset += 4;
             }
 
-            m_IBO = new indexBuffer(indices, RENDERER_INDICE_SIZE);
+            m_IBO = new indexBuffer { indices, RENDERER_INDICE_SIZE };
             glBindVertexArray(0);
         }
 
