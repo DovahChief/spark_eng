@@ -9,7 +9,7 @@
 #include <vector>
 #include <time.h>
 
-#define BATCH_R 0
+#define BATCH_R 1
 
 
 int main(){
@@ -56,15 +56,15 @@ int main(){
 		w.mouse_position(x, y);
 		shad.setUniform2f("light_pos", vec2((float) ( x* 10.0f/800.0f) + 2, (float) (9.0f - (y * 9.0f/450.0f)) ));
 
-#if BATCH_R
-		renderer.begin();
-#endif
-		for(auto x : sprites)
-            renderer.submit(x);
-#if BATCH_R
-		renderer.end();
-#endif
-		renderer.flush();
+        #if BATCH_R
+                renderer.begin();
+        #endif
+                for(auto x : sprites)
+                    renderer.submit(x);
+        #if BATCH_R
+                renderer.end();
+        #endif
+                renderer.flush();
 
 		w.update();
 	}
