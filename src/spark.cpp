@@ -6,8 +6,8 @@
  * */
 
 #include "includes.h"
-#include <vector>
-#include <time.h>
+//#include <vector>
+//#include <time.h>
 
 #define BATCH_R 1
 
@@ -19,8 +19,7 @@ int main(){
 	using namespace math;
 
 	window w("SPARK-R", 800, 450);
-
-	shader shad("/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
+    shader shad("/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 				"/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag");
 	shad.enable();
 	mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
@@ -31,8 +30,6 @@ int main(){
 #else
     simple2DRenderer renderer {};
 #endif
-
-
 
     std::vector<renderable2D*> sprites { };
     srand(time(NULL));
@@ -51,23 +48,19 @@ int main(){
 
 	while(!w.cerrado()){
 		w.clear();
-
 		double x {}, y {};
 		w.mouse_position(x, y);
 		shad.setUniform2f("light_pos", vec2((float) ( x* 10.0f/800.0f) + 2, (float) (9.0f - (y * 9.0f/450.0f)) ));
-
         #if BATCH_R
                 renderer.begin();
         #endif
-                for(auto x : sprites)
+                for(auto& x : sprites)
                     renderer.submit(x);
         #if BATCH_R
                 renderer.end();
         #endif
                 renderer.flush();
-
 		w.update();
 	}
-
 	return (0);
 }

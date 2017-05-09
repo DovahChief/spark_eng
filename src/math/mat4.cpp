@@ -6,11 +6,10 @@
  */
 #include "mat4.h"
 
-
 namespace spark {
     namespace math{
 
-        inline float to_radians(float grados){ return (grados * (M_PI / 180.0f));}
+        inline float to_radians(float grados){ return ((float) (grados * (M_PI / 180.0f)));}
             //construuctor en cero
             mat4::mat4(){
                 for (int i = 0; i < 4 * 4; i++ )
@@ -65,7 +64,7 @@ namespace spark {
             mat4 mat4::perspective(float fov, float aspect_ratio, float cerca, float lejos)
             {
                 mat4 result(1.0);
-                float q { 1.0f / tan(to_radians(0.5 * fov)) };
+                float q { 1.0f / tan(to_radians(0.5f * fov)) };
                 float a { q / aspect_ratio };
                 float b { (cerca + lejos) / (cerca - lejos) };
                 float c { (2.0f * cerca * lejos) / (cerca - lejos) };

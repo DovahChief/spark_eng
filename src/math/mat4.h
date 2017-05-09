@@ -32,7 +32,6 @@ namespace spark{
 				vec4 column[4];
 			};
 
-
 			mat4();
 			mat4(float _diagonal);
 
@@ -50,7 +49,6 @@ namespace spark{
 			static mat4 rotation(float angulo, const vec3& eje);
 
 		};
-
 	}/* namespace math */
 }/* namespace spark */
 
