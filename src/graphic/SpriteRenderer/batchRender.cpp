@@ -28,20 +28,27 @@ namespace spark {
             const math::vec4& color = renderable->get_color();
             const math::vec2& size = renderable->get_size();
 
+            int r  = color.x * 255.0f;
+            int g  = color.y * 255.0f;
+            int b  = color.z * 255.0f;
+            int a  = color.w * 255.0f;
+
+            unsigned int c = a << 24 | b <<16 | g << 8 | r;
+
             m_buffer->vertex = position;
-            m_buffer->color = color;
+            m_buffer->color = c;
             m_buffer++;
 
             m_buffer->vertex = math::vec3(position.x, position.y +size.y, position.z );
-            m_buffer->color = color;
+            m_buffer->color = c;
             m_buffer++;
 
             m_buffer->vertex = math::vec3(position.x + size.x, position.y +size.y, position.z );
-            m_buffer->color = color;
+            m_buffer->color = c;
             m_buffer++;
 
             m_buffer->vertex = math::vec3(position.x + size.x, position.y, position.z );
-            m_buffer->color = renderable->get_color();
+            m_buffer->color = c;
             m_buffer++;
 
             m_IndexCount += 6;
@@ -70,6 +77,7 @@ namespace spark {
         }
 
         void batchRender::init() {
+
             glGenVertexArrays(1, &m_VAO);
             glGenBuffers(1, &m_VBO);
 
@@ -84,8 +92,8 @@ namespace spark {
             glVertexAttribPointer(SHADER_VERTEX_INDEX, 3, GL_FLOAT, GL_FALSE,
                                   RENDERER_VERTEX_SIZE, (const GLvoid*) 0);
 
-            glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_FLOAT, GL_FALSE,
-                                  RENDERER_VERTEX_SIZE, (const GLvoid*)(3* sizeof(GLfloat)));
+            glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_UNSIGNED_BYTE, GL_TRUE,
+                                  RENDERER_VERTEX_SIZE, (const GLvoid*) offsetof(VertexData, color) );
 
             glBindBuffer(GL_ARRAY_BUFFER, 0);
 

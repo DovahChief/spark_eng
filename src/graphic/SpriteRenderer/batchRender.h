@@ -7,6 +7,7 @@
 #include "renderer2D.h"
 #include "../buffers/indexBuffer.h"
 #include <GL/glew.h>
+#include <cstddef>
 
 namespace spark {
     namespace graphics {
@@ -28,6 +29,7 @@ namespace spark {
             GLuint m_VBO;
             GLsizei m_IndexCount;
             VertexData* m_buffer;
+
         public:
             batchRender();
             ~batchRender();
