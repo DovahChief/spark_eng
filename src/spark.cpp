@@ -31,19 +31,20 @@ int main(){
     std::vector<renderable2D*> sprites { };
     srand(time(0));
 
-    for (float y = 0; y < 9.0f; y++) {
-        for (float x = 0; x < 16.0f; x++) {
+    for (float y = 0; y < 9.0f; y+= 0.05f) {
+        for (float x = 0; x < 16.0f; x+= 0.05f) {
             auto rand_col = rand()% 1000/1000.0f;
         #if BATCH_R
-            sprites.push_back(new sprite(x,y, 0.9f,0.9f, vec4(0,0 , rand_col,0)));
+            sprites.push_back(new sprite(x,y, 0.04f,0.04f, vec4(0,0 , rand_col,0)));
         #else
-            sprites.push_back(new static_sprite(x,y, 0.9f,0.9f, vec4(0,0 , rand_col ,0), shad));
+            sprites.push_back(new static_sprite(x,y, 0.09f,0.09f, vec4(0,0 , rand_col ,0), shad));
         #endif
         }
     }
 
     timer tm;
-    unsigned short fps = 0;
+    unsigned short fps {0};
+    unsigned long spr_count {0};
     tm.reset();
 
 	while(!w.cerrado()){
@@ -56,20 +57,24 @@ int main(){
         #if BATCH_R
                 renderer.begin();
         #endif
-                for(auto& spr : sprites)
+                for(auto& spr : sprites){
                     renderer.submit(spr);
+                    spr_count++;
+                }
         #if BATCH_R
                 renderer.end();
         #endif
                 renderer.flush();
 		w.update();
+
         fps++;
-        if (tm.get_sec() >= 1){
+        if (tm.get_diff() >= 1){
             printf("FPS : %d \n", fps);
+            std::cout << "SPRITE COUNT : " << spr_count<<"\n";
             tm.reset();
             fps = 0;
         }
-
+        spr_count = 0;
 	}
 	return (0);
 }

@@ -3,8 +3,6 @@
 //
 #pragma once
 #include <sys/time.h>
-#include <ctime>
-
 
 namespace spark{
 
@@ -13,19 +11,17 @@ namespace spark{
     private:
         timeval m_last;
         timeval now;
-        std::time_t start;
+
     public:
         timer(){}
         void reset(){
-            start = std::time(NULL);
             gettimeofday(&m_last, nullptr);
         }
         double get_diff(){
-            return ((now.tv_sec - m_last.tv_sec) );
+            gettimeofday(&now, nullptr);
+            return ((now.tv_sec - m_last.tv_sec));
         }
-        double get_sec(){
-            return (std::difftime(std::time(NULL), start));
-        }
+
     };
 
 }

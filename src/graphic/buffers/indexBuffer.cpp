@@ -10,7 +10,7 @@
 namespace spark {
 	namespace graphics {
 
-		indexBuffer::indexBuffer(GLushort* _data, GLsizei _count)
+		indexBuffer::indexBuffer(GLushort * _data, GLsizei _count)
 			: m_count(_count)
 			{
 				glGenBuffers(1, &m_Buffer_id);

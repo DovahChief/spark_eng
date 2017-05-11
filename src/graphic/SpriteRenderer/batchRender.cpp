@@ -45,6 +45,11 @@ namespace spark {
             m_buffer++;
 
             m_IndexCount += 6;
+            if (m_IndexCount >= 60000){ //eqivalente a 10000 sprites
+                this->end();
+                this->flush();
+                this->begin();
+            }
         }
 
         void batchRender::end() {
@@ -87,7 +92,7 @@ namespace spark {
             GLushort* indices = new GLushort[RENDERER_INDICE_SIZE] { };
             int offset { 0 };
 
-            for (int i = 0; i < RENDERER_INDICE_SIZE ; i+=6) {
+            for (GLushort i = 0; i < RENDERER_INDICE_SIZE ; i+=6) {
                 indices[i]      = offset + 0;
                 indices[i + 1]  = offset + 1;
                 indices[i + 2]  = offset + 2;
