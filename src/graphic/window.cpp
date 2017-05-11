@@ -18,7 +18,8 @@
 
 */
 
-namespace spark{ namespace graphics{
+namespace spark{
+    namespace graphics{
 
 
         //helper fun
@@ -40,7 +41,7 @@ namespace spark{ namespace graphics{
             for(int i = 0; i < MAX_BUTTONS; i++)    m_mouse_btn[i] = false;
         }
 
-        //init window checa que se inicialice todo bien
+        //init window checa que se inicialice  bien
         bool window::init(){
 
             if(!glfwInit()){
@@ -60,7 +61,7 @@ namespace spark{ namespace graphics{
             glfwSetKeyCallback(m_ventana , key_callback);
             glfwSetMouseButtonCallback(m_ventana, mouse_btn_call);
             glfwSetCursorPosCallback(m_ventana, cursor_pos_call);
-            
+            glfwSwapInterval(0.0);
             //glEnable(GL_CULL_FACE);
             //glCullFace(GL_BACK);
             
@@ -139,9 +140,8 @@ namespace spark{ namespace graphics{
         	glViewport(0,0, ancho, alto);
         }
 
-    }
-
-}
+    }/* namespace graphics */
+}/* namespace spark */
 
 
 

@@ -1,36 +1,58 @@
 /*
- * shader.h
+ * Shader2.h
  *
  *  Created on: 20/04/2017
  *      Author: jose
  */
 
-#ifndef GRAPHIC_SHADER_H_
-#define GRAPHIC_SHADER_H_
+#pragma once
 
-#include <GL/glew.h>
+
 #include "../utils/file_utils.h"
+#include "../math/mat4.h"
+#include "../math/vec2.h"
 
-namespace spark{ namespace graphics{
+#include <string>
+#include <GL/glew.h>
+#include <fstream>
+#include <iostream>
 
-	class shader_2{
-	private:
-		GLuint m_shader_id;
-		const char* m_ruta_vertex;
-		const char* m_ruta_fragment;
+namespace spark{
+	namespace graphics{
 
-	public:
-		shader_2(const char* _ruta_vertex, const char* _ruta_fragment);
-		~shader_2();
-
-		void enable() const;
-		void disable() const;
-
-	private:
-		GLuint load();
-	};
-
-}}
+		class shader
+		{
+			public:
+				shader(const std::string& _file_v, const std::string& _file_f);
+				virtual ~shader();
+				void enable();
+				void disable();
 
 
-#endif /* GRAPHIC_SHADER_H_ */
+				void setUniform1f(const GLchar* _nombre, float val );
+				void setUniform1i(const GLchar* _nombre, int val );
+				void setUniform2f(const GLchar* _nombre, const math::vec2& _vector );
+				void setUniform3f(const GLchar* _nombre, const math::vec3& _vector );
+				void setUniform4f(const GLchar* _nombre, const math::vec4& _vector );
+
+				void setUniformMAT4(const GLchar* _nombre, const math::mat4 _mat);
+
+				GLuint get_id(){return (m_shader_id);}
+
+			private:
+				static const unsigned int NUM_SHADERS = 2;
+				enum {
+					TRANSFORM_U,
+					NUM_UNIFORMS
+				};
+
+				GLuint m_shader_id;
+				GLuint m_shaders[NUM_SHADERS];
+				GLuint m_uniforms[NUM_UNIFORMS];
+
+				GLint get_UniformLocation(const GLchar* _nombre);
+
+		};
+	}/* namespace graphics */
+}/* namespace spark */
+

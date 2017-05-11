@@ -5,8 +5,7 @@
  *      Author: jose
  */
 
-#ifndef UTILS_FILE_UTILS_H_
-#define UTILS_FILE_UTILS_H_
+#pragma once
 
 #include <cstring>
 #include <cstdio>
@@ -23,7 +22,8 @@ namespace spark {
 				FILE * arch = fopen(_ruta.c_str() , "rt");
 				fseek(arch , 0 , SEEK_END);
 				unsigned long length = ftell(arch);
-				char* data  = new char[length + 1];
+				//char* data = new char[length + 1] { };
+				char* data { new char[length + 1] { } };
 				memset(data, 0 , length + 1);
 				fseek(arch, 0 , SEEK_SET);
 				fread(data, 1, length, arch);
@@ -32,15 +32,8 @@ namespace spark {
 				std::string r(data);
 				delete[] data;
 				return (r);
-			}
-			
-			        
+		}
     };
 		
-	};
+}/* namespace spark */
 
-
-
-
-
-#endif /* UTILS_FILE_UTILS_H_ */

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="spark"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spark">
+				<Option output="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/spark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward"/>
+					<Add directory="/usr/include/clang/4.0.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/llvm-4.0/bin/../lib/clang/4.0.0/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 spark"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="spark/fast">
+				<Option output="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/spark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward"/>
+					<Add directory="/usr/include/clang/4.0.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/llvm-4.0/bin/../lib/clang/4.0.0/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 spark/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/renderable2D.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/renderer2D.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/sprite.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/sprite.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/buffer.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/buffer.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/indexBuffer.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/indexBuffer.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/vertexArray.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/vertexArray.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/graphic.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/shader.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/shader.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/window.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/window.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/includes.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/mat4.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/mat4.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/maths.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/vec2.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/vec2.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/vec3.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/vec3.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/vec4.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/math/vec4.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/spark.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/utils/file_utils.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/utils/timer.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
