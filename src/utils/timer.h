@@ -21,6 +21,10 @@ namespace spark{
             gettimeofday(&now, nullptr);
             return ((now.tv_sec - m_last.tv_sec));
         }
+        double get_diff_ms(){
+            gettimeofday(&now, nullptr);
+            return ((now.tv_usec - m_last.tv_usec) / 1000);
+        }
 
     };
 

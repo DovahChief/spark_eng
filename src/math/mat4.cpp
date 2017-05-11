@@ -4,6 +4,7 @@
  *  Created on: 19/04/2017
  *      Author: jose
  */
+
 #include "mat4.h"
 
 namespace spark {
@@ -30,6 +31,7 @@ namespace spark {
             mat4 mat4::identity(){ return (mat4(1.0f)); }
             //algoritmo de multiplicacion de matrices
             mat4& mat4::multiply(const mat4& otro){
+                float data[16];
                 for(int i = 0; i < 4; i++){
                     for(int j = 0; j < 4; j++){
                         float sum { 0.0f };
@@ -37,9 +39,10 @@ namespace spark {
                             //element [ fila + columna * 4 ]
                             sum += elements[j + k * 4] * otro.elements[k + i * 4];
                         }
-                    elements[j + i * 4] = sum;
+                    data[j + i * 4] = sum;
                     }
                 }
+                memcpy(elements, data, 16* sizeof(float));
                 return (*this);
             }
             //sobrecarga de operadores

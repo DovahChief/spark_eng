@@ -37,8 +37,6 @@ int main(){
     tm.reset();
 
 	while(!w.cerrado()){
-		mat4 mtrans = mat4::rotation(fps / 10, vec3(0,0,1));
-		shad.setUniformMAT4("ml_mat", mtrans);
         w.clear();
 		double x {}, y {};
 		w.mouse_position(x, y);

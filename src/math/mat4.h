@@ -9,6 +9,7 @@
 #include "vec3.h"
 #include "vec4.h"
 #include <math.h>
+#include <cstring>
 /*
     usa column major ordering para el arreglo
     se accesa con:
