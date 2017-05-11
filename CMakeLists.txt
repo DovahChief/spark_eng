@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.7)
 project(spark)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS -Ofast)
+#set(CMAKE_CXX_FLAGS -Ofast)
 
 set(SOURCE_FILES
         src/graphic/buffers/buffer.cpp
@@ -16,8 +16,6 @@ set(SOURCE_FILES
         src/graphic/SpriteRenderer/renderer2D.h
         src/graphic/shader.cpp
         src/graphic/shader.h
-        src/graphic/SpriteRenderer/simple2Drenderer.cpp
-        src/graphic/SpriteRenderer/simple2Drenderer.h
         src/graphic/window.cpp
         src/graphic/window.h
         src/math/mat4.cpp
@@ -38,8 +36,6 @@ set(SOURCE_FILES
         src/graphic/SpriteRenderer/batchRender.h
         src/graphic/SpriteRenderer/sprite.cpp
         src/graphic/SpriteRenderer/sprite.h
-        src/graphic/SpriteRenderer/static_sprite.cpp
-        src/graphic/SpriteRenderer/static_sprite.h
         src/utils/timer.h)
 
 add_executable(spark ${SOURCE_FILES})

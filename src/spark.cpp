@@ -22,8 +22,6 @@ int main(){
     
     batchRender renderer {};
 
-    //simple2DRenderer renderer {};
-
     std::vector<renderable2D*> sprites { };
     srand(time(nullptr));
 
@@ -31,7 +29,6 @@ int main(){
         for (float x = 0; x < 16.0f; x+= 0.05f) {
             auto rand_col = rand()% 1000/1000.0f;
 			sprites.push_back(new sprite { x, y, 0.04f, 0.04f, vec4(0, 0, rand_col, 0) });
-            //sprites.push_back(new static_sprite(x,y, 0.09f,0.09f, vec4(0,0 , rand_col ,0), shad));
         }
     }
 
@@ -43,8 +40,8 @@ int main(){
         w.clear();
 		double x {}, y {};
 		w.mouse_position(x, y);
-		shad.setUniform2f("light_pos", vec2((float) ( x* 10.0f/800.0f),
-                                             (float) (9.0f - (y * 9.0f/450.0f)) ));
+		shad.setUniform2f("light_pos", vec2((float) (x * 16.0f/800.0f),
+                                             (float) (9.0f-(y * 9.0f/450.0f)) ));
 		renderer.begin();
 		for(auto& spr : sprites)
 			renderer.submit(spr);

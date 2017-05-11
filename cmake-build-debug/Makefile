@@ -123,6 +123,60 @@ spark/fast:
 	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/build
 .PHONY : spark/fast
 
+src/graphic/SpriteRenderer/batchRender.o: src/graphic/SpriteRenderer/batchRender.cpp.o
+
+.PHONY : src/graphic/SpriteRenderer/batchRender.o
+
+# target to build an object file
+src/graphic/SpriteRenderer/batchRender.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.o
+.PHONY : src/graphic/SpriteRenderer/batchRender.cpp.o
+
+src/graphic/SpriteRenderer/batchRender.i: src/graphic/SpriteRenderer/batchRender.cpp.i
+
+.PHONY : src/graphic/SpriteRenderer/batchRender.i
+
+# target to preprocess a source file
+src/graphic/SpriteRenderer/batchRender.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.i
+.PHONY : src/graphic/SpriteRenderer/batchRender.cpp.i
+
+src/graphic/SpriteRenderer/batchRender.s: src/graphic/SpriteRenderer/batchRender.cpp.s
+
+.PHONY : src/graphic/SpriteRenderer/batchRender.s
+
+# target to generate assembly for a file
+src/graphic/SpriteRenderer/batchRender.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.s
+.PHONY : src/graphic/SpriteRenderer/batchRender.cpp.s
+
+src/graphic/SpriteRenderer/sprite.o: src/graphic/SpriteRenderer/sprite.cpp.o
+
+.PHONY : src/graphic/SpriteRenderer/sprite.o
+
+# target to build an object file
+src/graphic/SpriteRenderer/sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o
+.PHONY : src/graphic/SpriteRenderer/sprite.cpp.o
+
+src/graphic/SpriteRenderer/sprite.i: src/graphic/SpriteRenderer/sprite.cpp.i
+
+.PHONY : src/graphic/SpriteRenderer/sprite.i
+
+# target to preprocess a source file
+src/graphic/SpriteRenderer/sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.i
+.PHONY : src/graphic/SpriteRenderer/sprite.cpp.i
+
+src/graphic/SpriteRenderer/sprite.s: src/graphic/SpriteRenderer/sprite.cpp.s
+
+.PHONY : src/graphic/SpriteRenderer/sprite.s
+
+# target to generate assembly for a file
+src/graphic/SpriteRenderer/sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.s
+.PHONY : src/graphic/SpriteRenderer/sprite.cpp.s
+
 src/graphic/buffers/buffer.o: src/graphic/buffers/buffer.cpp.o
 
 .PHONY : src/graphic/buffers/buffer.o
@@ -230,33 +284,6 @@ src/graphic/shader.s: src/graphic/shader.cpp.s
 src/graphic/shader.cpp.s:
 	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/shader.cpp.s
 .PHONY : src/graphic/shader.cpp.s
-
-src/graphic/simple2Drenderer.o: src/graphic/simple2Drenderer.cpp.o
-
-.PHONY : src/graphic/simple2Drenderer.o
-
-# target to build an object file
-src/graphic/simple2Drenderer.cpp.o:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/simple2Drenderer.cpp.o
-.PHONY : src/graphic/simple2Drenderer.cpp.o
-
-src/graphic/simple2Drenderer.i: src/graphic/simple2Drenderer.cpp.i
-
-.PHONY : src/graphic/simple2Drenderer.i
-
-# target to preprocess a source file
-src/graphic/simple2Drenderer.cpp.i:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/simple2Drenderer.cpp.i
-.PHONY : src/graphic/simple2Drenderer.cpp.i
-
-src/graphic/simple2Drenderer.s: src/graphic/simple2Drenderer.cpp.s
-
-.PHONY : src/graphic/simple2Drenderer.s
-
-# target to generate assembly for a file
-src/graphic/simple2Drenderer.cpp.s:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/simple2Drenderer.cpp.s
-.PHONY : src/graphic/simple2Drenderer.cpp.s
 
 src/graphic/window.o: src/graphic/window.cpp.o
 
@@ -429,6 +456,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... spark"
+	@echo "... src/graphic/SpriteRenderer/batchRender.o"
+	@echo "... src/graphic/SpriteRenderer/batchRender.i"
+	@echo "... src/graphic/SpriteRenderer/batchRender.s"
+	@echo "... src/graphic/SpriteRenderer/sprite.o"
+	@echo "... src/graphic/SpriteRenderer/sprite.i"
+	@echo "... src/graphic/SpriteRenderer/sprite.s"
 	@echo "... src/graphic/buffers/buffer.o"
 	@echo "... src/graphic/buffers/buffer.i"
 	@echo "... src/graphic/buffers/buffer.s"
@@ -441,9 +474,6 @@ help:
 	@echo "... src/graphic/shader.o"
 	@echo "... src/graphic/shader.i"
 	@echo "... src/graphic/shader.s"
-	@echo "... src/graphic/simple2Drenderer.o"
-	@echo "... src/graphic/simple2Drenderer.i"
-	@echo "... src/graphic/simple2Drenderer.s"
 	@echo "... src/graphic/window.o"
 	@echo "... src/graphic/window.i"
 	@echo "... src/graphic/window.s"

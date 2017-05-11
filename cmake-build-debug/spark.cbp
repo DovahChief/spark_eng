@@ -4,7 +4,7 @@
 	<Project>
 		<Option title="spark"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="gcc"/>
+		<Option compiler="clang"/>
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
@@ -42,16 +42,16 @@
 				<Option working_dir="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/6"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
-					<Add directory="/usr/include/c++/6/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward"/>
+					<Add directory="/usr/include/clang/4.0.0/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/llvm-4.0/bin/../lib/clang/4.0.0/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 spark"/>
@@ -65,16 +65,16 @@
 				<Option working_dir="/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
-				<Option compiler="gcc"/>
+				<Option compiler="clang"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/6"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
-					<Add directory="/usr/include/c++/6/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/x86_64-linux-gnu/c++/6.3.0"/>
+					<Add directory="/usr/bin/../lib/gcc/x86_64-linux-gnu/6.3.0/../../../../include/c++/6.3.0/backward"/>
+					<Add directory="/usr/include/clang/4.0.0/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
+					<Add directory="/usr/lib/llvm-4.0/bin/../lib/clang/4.0.0/include"/>
 				</Compiler>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-debug/Makefile&quot;  VERBOSE=1 spark/fast"/>
@@ -84,6 +84,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/renderable2D.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/renderer2D.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/sprite.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/sprite.h">
+			<Option target="spark"/>
+		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/buffer.cpp">
 			<Option target="spark"/>
 		</Unit>
@@ -105,22 +123,10 @@
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/graphic.h">
 			<Option target="spark"/>
 		</Unit>
-		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/renderable2D.h">
-			<Option target="spark"/>
-		</Unit>
-		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/renderer2D.h">
-			<Option target="spark"/>
-		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/shader.cpp">
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/shader.h">
-			<Option target="spark"/>
-		</Unit>
-		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/simple2Drenderer.cpp">
-			<Option target="spark"/>
-		</Unit>
-		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/simple2Drenderer.h">
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/window.cpp">
@@ -169,6 +175,9 @@
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/utils/file_utils.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/utils/timer.h">
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/CMakeLists.txt">
