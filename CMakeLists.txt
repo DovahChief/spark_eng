@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.7)
 project(spark)
 
 set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_FLAGS -Ofast)
 
 set(SOURCE_FILES
         src/graphic/buffers/buffer.cpp
@@ -42,4 +43,5 @@ set(SOURCE_FILES
         src/utils/timer.h)
 
 add_executable(spark ${SOURCE_FILES})
+set(CMAKE_BUILD_TYPE RELEASE)
 target_link_libraries( spark GL GLEW glfw pthread)

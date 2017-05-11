@@ -61,7 +61,7 @@ namespace spark{
             glfwSetKeyCallback(m_ventana , key_callback);
             glfwSetMouseButtonCallback(m_ventana, mouse_btn_call);
             glfwSetCursorPosCallback(m_ventana, cursor_pos_call);
-            
+            glfwSwapInterval(0.0);
             //glEnable(GL_CULL_FACE);
             //glCullFace(GL_BACK);
             
