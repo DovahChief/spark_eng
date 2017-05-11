@@ -39,7 +39,7 @@ set(SOURCE_FILES
         src/graphic/SpriteRenderer/sprite.h
         src/graphic/SpriteRenderer/static_sprite.cpp
         src/graphic/SpriteRenderer/static_sprite.h
-        )
+        src/utils/timer.h)
 
 add_executable(spark ${SOURCE_FILES})
 target_link_libraries( spark GL GLEW glfw pthread)
