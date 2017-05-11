@@ -93,7 +93,7 @@ namespace spark {
                                   RENDERER_VERTEX_SIZE, (const GLvoid*) 0);
 
             glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_UNSIGNED_BYTE, GL_TRUE,
-                                  RENDERER_VERTEX_SIZE, (const GLvoid*) offsetof(VertexData, color) );
+                                  RENDERER_VERTEX_SIZE, (const GLvoid*) offsetof(VertexData, color)  );
 
             glBindBuffer(GL_ARRAY_BUFFER, 0);
 

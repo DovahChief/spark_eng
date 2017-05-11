@@ -31,7 +31,7 @@ set(SOURCE_FILES
         src/shader/basicShader.vert
         src/utils/file_utils.h
         src/includes.h
-        src/spark.cpp
+        spark.cpp
         src/graphic/SpriteRenderer/batchRender.cpp
         src/graphic/SpriteRenderer/batchRender.h
         src/graphic/SpriteRenderer/sprite.cpp
