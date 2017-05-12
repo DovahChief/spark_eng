@@ -17,18 +17,14 @@ int main(){
     shader shad("/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 				"/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag");
 	shad.enable();
-	mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
-	shad.setUniformMAT4("pr_mat", ortho);
+	//mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
+	//shad.setUniformMAT4("pr_mat", ortho);
     
-    batchRender renderer {};
-
-    std::vector<renderable2D*> sprites { };
-    srand(time(nullptr));
-
-    for (float y = 0; y < 9.0f; y+= 0.05f) {
-        for (float x = 0; x < 16.0f; x+= 0.05f) {
-            auto rand_col = rand()% 1000/1000.0f;
-			sprites.push_back(new sprite { x, y, 0.04f, 0.04f, vec4(0, 0, rand_col, 0) });
+    tileLayer layer1(&shad);
+    srand(time(NULL));
+    for (float y = -9.0f; y < 9.0f; y += 0.1){
+        for (float x = -16.0f; x < 16.0f; x += 0.1){
+            layer1.add( new sprite {x,y, 0.09f, 0.09f, vec4(0,0,rand()%1000/1000.0f,0)});
         }
     }
 
@@ -40,23 +36,20 @@ int main(){
         w.clear();
 		double x {}, y {};
 		w.mouse_position(x, y);
-		shad.setUniform2f("light_pos", vec2((float) (x * 16.0f/800.0f),
-                                             (float) (9.0f-(y * 9.0f/450.0f)) ));
-		renderer.begin();
-		for(auto& spr : sprites)
-			renderer.submit(spr);
-		renderer.end();
-		renderer.flush();
+		shad.setUniform2f("light_pos", vec2((float) ( (x * 32.0f/800.0f) - 16.0f ),
+                                             (float) (9.0f-(y * 18.0f/450.0f)) ));
 
+        layer1.render();
 		w.update();
 
         fps++;
         if (tm.get_diff() >= 1){
-            printf("FPS : %d SPRITES : %d\n", fps, (uint)sprites.size());
+            printf("FPS : %d \n", fps);
             tm.reset();
             fps = 0;
         }
 
 	}
+    shad.disable();
 	return (0);
 }

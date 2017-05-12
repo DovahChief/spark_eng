@@ -34,9 +34,9 @@ namespace spark {
             batchRender();
             ~batchRender();
 
-            void begin();
+            void begin() override ;
             virtual void submit(const renderable2D* renderable) override;
-            void end();
+            void end() override ;
             virtual void flush() override;
 
         private:

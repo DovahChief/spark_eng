@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/spark.cpp">
+			<Option target="spark"/>
+		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.cpp">
 			<Option target="spark"/>
 		</Unit>
@@ -121,6 +124,18 @@
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/graphic.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/layer.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/layer.h">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/tileLayer.cpp">
+			<Option target="spark"/>
+		</Unit>
+		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/tileLayer.h">
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/shader.cpp">
@@ -169,9 +184,6 @@
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert">
-			<Option target="spark"/>
-		</Unit>
-		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/spark.cpp">
 			<Option target="spark"/>
 		</Unit>
 		<Unit filename="/home/jose/Documentos/c++/eclipseWS/spark/src/utils/file_utils.h">

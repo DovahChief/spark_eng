@@ -9,6 +9,7 @@
 #include "buffers/buffer.h"
 #include "buffers/indexBuffer.h"
 #include "buffers/vertexArray.h"
+#include "layers/tileLayer.h"
 
 
 

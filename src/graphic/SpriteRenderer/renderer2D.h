@@ -15,7 +15,9 @@ namespace spark {
 
 		class renderer2D {
 
-		protected:
+		public:
+			virtual void begin(){}
+			virtual void end(){}
 			virtual void submit(const renderable2D* renderable) = 0;
 			virtual void flush() = 0;
 

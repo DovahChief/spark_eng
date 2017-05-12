@@ -48,6 +48,11 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="cdt.managedbuild.config.gnu.exe.debug.1637377504.1999580818" name="spark.cpp" rcbsApplicability="disable" resourcePath="spark.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1965466261.1110169335">
+						<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1965466261.1110169335" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.1965466261">
+							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1552912777" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+						</tool>
+					</fileInfo>
 					<sourceEntries>
 						<entry excluding="shader" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
