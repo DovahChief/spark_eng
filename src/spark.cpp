@@ -19,13 +19,13 @@ int main(){
 
 	window w{"SPARK2", 800, 450};
 
-	shader* shad = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
+	shader* shad1 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 			                    "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
 
 	shader* shad2 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
     
-    tileLayer layer1 {shad};
+    tileLayer layer1 {shad1};
     tileLayer layer2 {shad2};
 
     srand(time(NULL));
@@ -43,8 +43,9 @@ int main(){
 		w.mouse_position(x, y);
         x =  (x * 32.0f/800.0f) - 16.0f;
         y =  9.0f - (y * 18.0f/450.0f);
-        shad->enable();
-        shad->setUniform2f("light_pos", vec2 {x, y} );
+
+        shad1->enable();
+        shad1->setUniform2f("light_pos", vec2 {x, y} );
         shad2->enable();
         shad2->setUniform2f("light_pos", vec2 {x, y} );
 
