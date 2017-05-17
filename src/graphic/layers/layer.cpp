@@ -16,7 +16,7 @@ namespace spark {
         }
 
         layer::~layer() {
-            //delete m_renderer; todo checar
+            delete m_renderer; //todo checar
             delete m_shad;
             for (auto c: m_renderables)
                 delete c;
