@@ -13,7 +13,7 @@ int main(){
 	using namespace graphics;
 	using namespace math;
 
-    timer tm { };
+    timer tm {};
     unsigned short fps {0};
     double x {0.0}, y {0.0};
 
@@ -25,8 +25,8 @@ int main(){
 	shader* shad2 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
     
-    tileLayer layer1(shad);
-    tileLayer layer2(shad2);
+    tileLayer layer1 {shad};
+    tileLayer layer2 {shad2};
 
     srand(time(NULL));
     for (float _y = -9.0f; _y < 9.0f; _y += 0.1){
@@ -53,7 +53,7 @@ int main(){
 		w.update();
 
         if (tm.get_diff() >= 1){
-            printf("FPS : %d \n", fps);
+            std::cout << "FPS : " << fps<<std::endl;
             tm.reset();
             fps = 0;
         }

@@ -14,7 +14,6 @@
 
 #include <string>
 #include <GL/glew.h>
-#include <fstream>
 #include <iostream>
 
 namespace spark{
