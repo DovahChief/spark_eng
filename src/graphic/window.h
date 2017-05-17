@@ -39,13 +39,13 @@ namespace spark{
             bool is_key_pressed(unsigned int _keycode) const;
             bool is_mouse_btn_pressed(unsigned int _boton) const;
             void mouse_position(double& _x, double& _y);
+            void mouse_position(float& _x, float& _y);
 
         private://metodos privados
             bool init();
             friend  void key_callback(GLFWwindow * win,  int key, int scancode, int action, int mods);
             friend  void mouse_btn_call(GLFWwindow * win,  int btn, int action, int mods);
             friend  void cursor_pos_call(GLFWwindow * win,  double xpos, double ypos);
-
         private: //data members
             const char* m_nombre;
             int m_ancho, m_alto;

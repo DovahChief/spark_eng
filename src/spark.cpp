@@ -15,9 +15,9 @@ int main(){
 
     timer tm {};
     unsigned short fps {0};
-    double x {0.0}, y {0.0};
+    float x {0.0f}, y {0.0f};
 
-	window w("SPARK2", 800, 450);
+	window w{"SPARK2", 800, 450};
 
 	shader* shad = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 			                    "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
@@ -41,19 +41,19 @@ int main(){
 	while(!w.cerrado()){
         w.clear();
 		w.mouse_position(x, y);
+        x =  (x * 32.0f/800.0f) - 16.0f;
+        y =  9.0f - (y * 18.0f/450.0f);
         shad->enable();
-        shad->setUniform2f("light_pos", vec2((float) ( (x * 32.0f/800.0f) - 16.0f ),
-                                              (float) (9.0f-(y * 18.0f/450.0f)) ));
+        shad->setUniform2f("light_pos", vec2 {x, y} );
         shad2->enable();
-        shad2->setUniform2f("light_pos", vec2((float) ( (x * 32.0f/800.0f) - 16.0f ),
-                                            (float) (9.0f-(y * 18.0f/450.0f)) ));
+        shad2->setUniform2f("light_pos", vec2 {x, y} );
 
         layer1.render();
         layer2.render();
 		w.update();
 
         if (tm.get_diff() >= 1){
-            std::cout << "FPS : " << fps<<std::endl;
+            std::cout << "FPS : " << fps <<std::endl;
             tm.reset();
             fps = 0;
         }
