@@ -45,9 +45,29 @@ namespace spark {
                 memcpy(elements, data, 16* sizeof(float));
                 return (*this);
             }
+
+            vec4 mat4::multiply(const vec4 &otro) const {
+                return (vec4{
+                        column[0].x * otro.x + column[1].x * otro.y + column[2].x * otro.z + column[4].x * otro.w,
+                        column[0].y * otro.x + column[1].y * otro.y + column[2].y * otro.z + column[4].y * otro.w,
+                        column[0].z * otro.x + column[1].z * otro.y + column[2].z * otro.z + column[4].z * otro.w,
+                        column[0].w * otro.x + column[1].w * otro.y + column[2].w * otro.z + column[4].w * otro.w
+                });
+            }
+
+            vec3 mat4::multiply(const vec3 &otro) const {
+                return (vec3{
+                        column[0].x * otro.x + column[1].x * otro.y + column[2].x * otro.z + column[4].x,
+                        column[0].y * otro.x + column[1].y * otro.y + column[2].y * otro.z + column[4].y,
+                        column[0].z * otro.x + column[1].z * otro.y + column[2].z * otro.z + column[4].z
+                });
+            }
             //sobrecarga de operadores
             mat4 operator*(mat4 izq, const mat4& right) { return (izq.multiply(right)); }
             mat4& mat4::operator*=(const mat4& right)         { return (multiply(right)); }
+
+            vec4 operator*(const mat4& izq, const vec4& right)  { return (izq.multiply(right)); }
+            vec3 operator*(const mat4& izq, const vec3& right)  { return (izq.multiply(right)); }
             //matriz ortografica
             mat4 mat4::orthographic(float izq, float der, float aba, float arr,float cerca, float lejos)
             {
@@ -131,7 +151,6 @@ namespace spark {
             }
 
     } /* namespace math */
-
 } /* namespace spark */
 
 

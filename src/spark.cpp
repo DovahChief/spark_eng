@@ -7,7 +7,11 @@
 
 #include "includes.h"
 
-int main(){
+
+
+int main() {
+	constexpr int ANCHO_W = 800;
+	constexpr int ALTO_W  = 450;
 
 	using namespace spark;
 	using namespace graphics;
@@ -15,13 +19,12 @@ int main(){
 
     timer tm {};
     unsigned short fps {0};
-    float x {0.0f}, y {0.0f};
+    float x_mouse_pos {0.0f}, y_mouse_pos {0.0f};
 
-	window w{"SPARK2", 800, 450};
+	window w {"SPARK2-1", ANCHO_W, ALTO_W};
 
 	shader* shad1 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
-			                    "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
-
+			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
 	shader* shad2 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
     
@@ -29,8 +32,8 @@ int main(){
     tileLayer layer2 {shad2};
 
     srand(time(NULL));
-    for (float _y = -9.0f; _y < 9.0f; _y += 0.1){
-        for (float _x = -16.0f; _x < 16.0f; _x += 0.1){
+    for (float _y = ABA_W; _y < ARR_W; _y += 0.1){
+        for (float _x = IZQ_W; _x < DER_W; _x += 0.1){
             layer1.add( new sprite {_x,_y, 0.09f, 0.09f, vec4(0,0,rand()%1000/1000.0f,0)});
         }
     }
@@ -40,14 +43,14 @@ int main(){
 
 	while(!w.cerrado()){
         w.clear();
-		w.mouse_position(x, y);
-        x =  (x * 32.0f/800.0f) - 16.0f;
-        y =  9.0f - (y * 18.0f/450.0f);
+		w.mouse_position(x_mouse_pos , y_mouse_pos );
+        x_mouse_pos =  (x_mouse_pos  * (DER_W * 2)/ANCHO_W) - DER_W;
+        y_mouse_pos =  ARR_W - (y_mouse_pos * (ARR_W * 2)/ALTO_W);
 
         shad1->enable();
-        shad1->setUniform2f("light_pos", vec2 {x, y} );
+        shad1->setUniform2f("light_pos", vec2 {x_mouse_pos, y_mouse_pos} );
         shad2->enable();
-        shad2->setUniform2f("light_pos", vec2 {x, y} );
+        shad2->setUniform2f("light_pos", vec2 {x_mouse_pos, y_mouse_pos} );
 
         layer1.render();
         layer2.render();
