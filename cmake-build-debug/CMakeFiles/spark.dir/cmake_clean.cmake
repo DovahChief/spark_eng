@@ -8,9 +8,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/spark.dir/src/math/vec2.cpp.o"
   "CMakeFiles/spark.dir/src/math/vec3.cpp.o"
   "CMakeFiles/spark.dir/src/math/vec4.cpp.o"
-  "CMakeFiles/spark.dir/src/spark.cpp.o"
+  "CMakeFiles/spark.dir/spark.cpp.o"
   "CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.o"
   "CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o"
+  "CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o"
+  "CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o"
   "spark.pdb"
   "spark"
 )

@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/jose/Documentos/c++/eclipseWS/spark/spark.cpp
+src/includes.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/includes.h
+
 /home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.cpp
 batchRender.h
 /home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.h
@@ -16,6 +20,8 @@ renderer2D.h
 ../buffers/indexBuffer.h
 /home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/indexBuffer.h
 GL/glew.h
+-
+cstddef
 -
 
 /home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/renderable2D.h
@@ -93,6 +99,34 @@ buffers/indexBuffer.h
 /home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/indexBuffer.h
 buffers/vertexArray.h
 /home/jose/Documentos/c++/eclipseWS/spark/src/graphic/buffers/vertexArray.h
+layers/tileLayer.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/tileLayer.h
+
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/layer.cpp
+layer.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/layer.h
+
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/layer.h
+vector
+-
+../SpriteRenderer/renderer2D.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/renderer2D.h
+../SpriteRenderer/renderable2D.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/renderable2D.h
+../shader.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/shader.h
+../../math/mat4.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/math/mat4.h
+
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/tileLayer.cpp
+tileLayer.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/tileLayer.h
+
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/tileLayer.h
+layer.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/layers/layer.h
+../SpriteRenderer/batchRender.h
+/home/jose/Documentos/c++/eclipseWS/spark/src/graphic/SpriteRenderer/batchRender.h
 
 /home/jose/Documentos/c++/eclipseWS/spark/src/graphic/shader.cpp
 shader.h
@@ -147,6 +181,8 @@ vec4.h
 /home/jose/Documentos/c++/eclipseWS/spark/src/math/vec4.h
 math.h
 -
+cstring
+-
 
 /home/jose/Documentos/c++/eclipseWS/spark/src/math/maths.h
 vec2.h
@@ -181,10 +217,6 @@ vec4.h
 /home/jose/Documentos/c++/eclipseWS/spark/src/math/vec4.h
 iostream
 -
-
-/home/jose/Documentos/c++/eclipseWS/spark/src/spark.cpp
-includes.h
-/home/jose/Documentos/c++/eclipseWS/spark/src/includes.h
 
 /home/jose/Documentos/c++/eclipseWS/spark/src/utils/file_utils.h
 cstring

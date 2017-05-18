@@ -12,7 +12,6 @@ RM := rm -rf
 -include src/graphic/buffers/subdir.mk
 -include src/graphic/SpriteRenderer/subdir.mk
 -include src/graphic/subdir.mk
--include src/subdir.mk
 -include subdir.mk
 -include objects.mk
 

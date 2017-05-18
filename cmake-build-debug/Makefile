@@ -123,6 +123,33 @@ spark/fast:
 	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/build
 .PHONY : spark/fast
 
+spark.o: spark.cpp.o
+
+.PHONY : spark.o
+
+# target to build an object file
+spark.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/spark.cpp.o
+.PHONY : spark.cpp.o
+
+spark.i: spark.cpp.i
+
+.PHONY : spark.i
+
+# target to preprocess a source file
+spark.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/spark.cpp.i
+.PHONY : spark.cpp.i
+
+spark.s: spark.cpp.s
+
+.PHONY : spark.s
+
+# target to generate assembly for a file
+spark.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/spark.cpp.s
+.PHONY : spark.cpp.s
+
 src/graphic/SpriteRenderer/batchRender.o: src/graphic/SpriteRenderer/batchRender.cpp.o
 
 .PHONY : src/graphic/SpriteRenderer/batchRender.o
@@ -257,6 +284,60 @@ src/graphic/buffers/vertexArray.s: src/graphic/buffers/vertexArray.cpp.s
 src/graphic/buffers/vertexArray.cpp.s:
 	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.s
 .PHONY : src/graphic/buffers/vertexArray.cpp.s
+
+src/graphic/layers/layer.o: src/graphic/layers/layer.cpp.o
+
+.PHONY : src/graphic/layers/layer.o
+
+# target to build an object file
+src/graphic/layers/layer.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o
+.PHONY : src/graphic/layers/layer.cpp.o
+
+src/graphic/layers/layer.i: src/graphic/layers/layer.cpp.i
+
+.PHONY : src/graphic/layers/layer.i
+
+# target to preprocess a source file
+src/graphic/layers/layer.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.i
+.PHONY : src/graphic/layers/layer.cpp.i
+
+src/graphic/layers/layer.s: src/graphic/layers/layer.cpp.s
+
+.PHONY : src/graphic/layers/layer.s
+
+# target to generate assembly for a file
+src/graphic/layers/layer.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.s
+.PHONY : src/graphic/layers/layer.cpp.s
+
+src/graphic/layers/tileLayer.o: src/graphic/layers/tileLayer.cpp.o
+
+.PHONY : src/graphic/layers/tileLayer.o
+
+# target to build an object file
+src/graphic/layers/tileLayer.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o
+.PHONY : src/graphic/layers/tileLayer.cpp.o
+
+src/graphic/layers/tileLayer.i: src/graphic/layers/tileLayer.cpp.i
+
+.PHONY : src/graphic/layers/tileLayer.i
+
+# target to preprocess a source file
+src/graphic/layers/tileLayer.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.i
+.PHONY : src/graphic/layers/tileLayer.cpp.i
+
+src/graphic/layers/tileLayer.s: src/graphic/layers/tileLayer.cpp.s
+
+.PHONY : src/graphic/layers/tileLayer.s
+
+# target to generate assembly for a file
+src/graphic/layers/tileLayer.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.s
+.PHONY : src/graphic/layers/tileLayer.cpp.s
 
 src/graphic/shader.o: src/graphic/shader.cpp.o
 
@@ -420,33 +501,6 @@ src/math/vec4.cpp.s:
 	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/math/vec4.cpp.s
 .PHONY : src/math/vec4.cpp.s
 
-src/spark.o: src/spark.cpp.o
-
-.PHONY : src/spark.o
-
-# target to build an object file
-src/spark.cpp.o:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/spark.cpp.o
-.PHONY : src/spark.cpp.o
-
-src/spark.i: src/spark.cpp.i
-
-.PHONY : src/spark.i
-
-# target to preprocess a source file
-src/spark.cpp.i:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/spark.cpp.i
-.PHONY : src/spark.cpp.i
-
-src/spark.s: src/spark.cpp.s
-
-.PHONY : src/spark.s
-
-# target to generate assembly for a file
-src/spark.cpp.s:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/spark.cpp.s
-.PHONY : src/spark.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -456,6 +510,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... spark"
+	@echo "... spark.o"
+	@echo "... spark.i"
+	@echo "... spark.s"
 	@echo "... src/graphic/SpriteRenderer/batchRender.o"
 	@echo "... src/graphic/SpriteRenderer/batchRender.i"
 	@echo "... src/graphic/SpriteRenderer/batchRender.s"
@@ -471,6 +528,12 @@ help:
 	@echo "... src/graphic/buffers/vertexArray.o"
 	@echo "... src/graphic/buffers/vertexArray.i"
 	@echo "... src/graphic/buffers/vertexArray.s"
+	@echo "... src/graphic/layers/layer.o"
+	@echo "... src/graphic/layers/layer.i"
+	@echo "... src/graphic/layers/layer.s"
+	@echo "... src/graphic/layers/tileLayer.o"
+	@echo "... src/graphic/layers/tileLayer.i"
+	@echo "... src/graphic/layers/tileLayer.s"
 	@echo "... src/graphic/shader.o"
 	@echo "... src/graphic/shader.i"
 	@echo "... src/graphic/shader.s"
@@ -489,9 +552,6 @@ help:
 	@echo "... src/math/vec4.o"
 	@echo "... src/math/vec4.i"
 	@echo "... src/math/vec4.s"
-	@echo "... src/spark.o"
-	@echo "... src/spark.i"
-	@echo "... src/spark.s"
 .PHONY : help
 
 

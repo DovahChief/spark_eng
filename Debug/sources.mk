@@ -45,5 +45,4 @@ src/graphic/SpriteRenderer \
 src/graphic/buffers \
 src/graphic \
 src/math \
-src \
 

@@ -36,7 +36,7 @@ set(SOURCE_FILES
         src/graphic/SpriteRenderer/batchRender.h
         src/graphic/SpriteRenderer/sprite.cpp
         src/graphic/SpriteRenderer/sprite.h
-        src/utils/timer.h)
+        src/utils/timer.h src/graphic/layers/layer.cpp src/graphic/layers/layer.h src/graphic/layers/tileLayer.cpp src/graphic/layers/tileLayer.h)
 
 add_executable(spark ${SOURCE_FILES})
 set(CMAKE_BUILD_TYPE RELEASE)
