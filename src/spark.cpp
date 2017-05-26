@@ -21,7 +21,7 @@ int main() {
     unsigned short fps {0};
     float x_mouse_pos {0.0f}, y_mouse_pos {0.0f};
     
-	window w {"SPARK2", ANCHO_W, ALTO_W};
+	window w {"SPARK", ANCHO_W, ALTO_W};
 
 	shader* shad1 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
