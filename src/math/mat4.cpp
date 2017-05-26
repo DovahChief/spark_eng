@@ -47,19 +47,22 @@ namespace spark {
             }
 
             vec4 mat4::multiply(const vec4 &otro) const {
-                return (vec4{
-                        column[0].x * otro.x + column[1].x * otro.y + column[2].x * otro.z + column[4].x * otro.w,
-                        column[0].y * otro.x + column[1].y * otro.y + column[2].y * otro.z + column[4].y * otro.w,
-                        column[0].z * otro.x + column[1].z * otro.y + column[2].z * otro.z + column[4].z * otro.w,
-                        column[0].w * otro.x + column[1].w * otro.y + column[2].w * otro.z + column[4].w * otro.w
-                });
+                
+               auto result =  vec4{
+                        column[0].x * otro.x + column[1].x * otro.y + column[2].x * otro.z + column[3].x * otro.w,
+                        column[0].y * otro.x + column[1].y * otro.y + column[2].y * otro.z + column[3].y * otro.w,
+                        column[0].z * otro.x + column[1].z * otro.y + column[2].z * otro.z + column[3].z * otro.w,
+                        column[0].w * otro.x + column[1].w * otro.y + column[2].w * otro.z + column[3].w * otro.w
+                };
+                
+                return (result);
             }
 
             vec3 mat4::multiply(const vec3 &otro) const {
                 return (vec3{
-                        column[0].x * otro.x + column[1].x * otro.y + column[2].x * otro.z + column[4].x,
-                        column[0].y * otro.x + column[1].y * otro.y + column[2].y * otro.z + column[4].y,
-                        column[0].z * otro.x + column[1].z * otro.y + column[2].z * otro.z + column[4].z
+                        column[0].x * otro.x + column[1].x * otro.y + column[2].x * otro.z + column[3].x,
+                        column[0].y * otro.x + column[1].y * otro.y + column[2].y * otro.z + column[3].y,
+                        column[0].z * otro.x + column[1].z * otro.y + column[2].z * otro.z + column[3].z
                 });
             }
             //sobrecarga de operadores

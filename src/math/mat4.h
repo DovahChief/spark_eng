@@ -55,6 +55,14 @@ namespace spark{
 			static mat4 scale(const vec3& scale);
 			static mat4 rotation(float angulo, const vec3& eje);
 
+			friend std::ostream& operator<<(std::ostream& stream, const mat4& mat){
+                stream << "mat4 : \n |"<<mat.column[0].x<<", "<<mat.column[1].x<<", "<<mat.column[2].x<<", "<<mat.column[3].x<<"|";
+                stream << " |"<<mat.column[0].y<<", "<<mat.column[1].y<<", "<<mat.column[2].y<<", "<<mat.column[3].y<<"|";
+				stream << " |"<<mat.column[0].z<<", "<<mat.column[1].z<<", "<<mat.column[2].z<<", "<<mat.column[3].z<<"|";
+				stream << " |"<<mat.column[0].w<<", "<<mat.column[1].w<<", "<<mat.column[2].w<<", "<<mat.column[3].w<<"|";
+				return (stream);
+            }
+
 		};
 	}/* namespace math */
 }/* namespace spark */

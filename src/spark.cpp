@@ -21,7 +21,7 @@ int main() {
     unsigned short fps {0};
     float x_mouse_pos {0.0f}, y_mouse_pos {0.0f};
     
-	window w {"SPARK2-1", ANCHO_W, ALTO_W};
+	window w {"SPARK2", ANCHO_W, ALTO_W};
 
 	shader* shad1 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
 			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
@@ -38,8 +38,6 @@ int main() {
         }
     }
 
-
-    std::cout << "ejem multi " << mat4::identity() * vec4(11.0f,3.3f,5.5f,17.117f) << std::endl;
 
     layer1.add(new sprite {0,0, 4.0f, 4.0f, vec4(0.7,0,0,0)});
     layer2.add(new sprite {-2,-2, 4.0f, 4.0f, vec4(0.7,0,0,0)});

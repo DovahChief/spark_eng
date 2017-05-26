@@ -35,19 +35,19 @@ namespace spark {
 
             unsigned int c = a << 24 | b <<16 | g << 8 | r;
 
-            m_buffer->vertex = position;
+            m_buffer->vertex = m_transform_stack.back() *  position;
             m_buffer->color = c;
             m_buffer++;
 
-            m_buffer->vertex = math::vec3(position.x, position.y +size.y, position.z );
+            m_buffer->vertex = m_transform_stack.back() * math::vec3(position.x, position.y +size.y, position.z );
             m_buffer->color = c;
             m_buffer++;
 
-            m_buffer->vertex = math::vec3(position.x + size.x, position.y +size.y, position.z );
+            m_buffer->vertex = m_transform_stack.back() * math::vec3(position.x + size.x, position.y +size.y, position.z );
             m_buffer->color = c;
             m_buffer++;
 
-            m_buffer->vertex = math::vec3(position.x + size.x, position.y, position.z );
+            m_buffer->vertex = m_transform_stack.back() * math::vec3(position.x + size.x, position.y, position.z );
             m_buffer->color = c;
             m_buffer++;
 
