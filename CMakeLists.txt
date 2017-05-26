@@ -4,6 +4,7 @@ project(spark)
 set(CMAKE_CXX_STANDARD 14)
 #set(CMAKE_CXX_FLAGS -Ofast)
 
+
 set(SOURCE_FILES
         src/graphic/buffers/buffer.cpp
         src/graphic/buffers/buffer.h

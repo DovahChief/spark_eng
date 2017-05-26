@@ -42,6 +42,12 @@ namespace spark{
 			friend mat4 operator*(mat4 izq, const mat4& right);
 			mat4& operator*=(const mat4& right);
 
+			vec3 multiply(const vec3& otro) const ;
+			vec4 multiply(const vec4& otro) const ;
+
+			friend vec4 operator*(const mat4& izq, const vec4& right);
+			friend vec3 operator*(const mat4& izq, const vec3& right);
+
 			static mat4 orthographic(float izq, float der, float aba, float arr, float cerca, float lejos);
 			static mat4 perspective(float fov, float aspect_ratio, float cerca, float lejos);
 

@@ -27,7 +27,7 @@ namespace spark{
         void key_callback(GLFWwindow * win,  int key, int scancode, int action, int mods);
         void mouse_btn_call(GLFWwindow * win,  int btn, int action, int mods);
         void cursor_pos_call(GLFWwindow * win,  double xpos, double ypos);
-        
+
         //constructor
         window::window(const char* _nombre, int _ancho, int _alto){
             m_alto = _alto;
@@ -94,6 +94,11 @@ namespace spark{
             y = mouse_y;
         }
 
+        void window::mouse_position(float& x, float& y){
+            x = (float) mouse_x;
+            y = (float) mouse_y;
+        }
+
         //checa si la ventana esta cerrada
         bool window::cerrado() const {
         	return (glfwWindowShouldClose(m_ventana) == 1);
@@ -135,7 +140,7 @@ namespace spark{
             w->mouse_y = ypos;
          }
 
-        //helpers //resize
+       //helpers //resize
         void window_resize(GLFWwindow *w, int ancho, int alto){
         	glViewport(0,0, ancho, alto);
         }

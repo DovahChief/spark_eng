@@ -1,0 +1,72 @@
+[
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/buffers/buffer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/buffers/buffer.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/buffers/buffer.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/buffers/indexBuffer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/buffers/indexBuffer.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/buffers/indexBuffer.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/buffers/vertexArray.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/buffers/vertexArray.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/shader.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/shader.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/shader.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/window.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/window.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/window.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/math/mat4.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/math/mat4.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/math/mat4.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/math/vec2.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/math/vec2.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/math/vec2.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/math/vec3.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/math/vec3.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/math/vec3.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/math/vec4.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/math/vec4.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/math/vec4.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/spark.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/spark.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/spark.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/SpriteRenderer/batchRender.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/SpriteRenderer/batchRender.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/SpriteRenderer/sprite.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/SpriteRenderer/sprite.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/layers/layer.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/layers/layer.cpp"
+},
+{
+  "directory": "/home/jose/Documentos/c++/spark_eng/build",
+  "command": "/usr/bin/c++     -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/layers/tileLayer.cpp",
+  "file": "/home/jose/Documentos/c++/spark_eng/src/graphic/layers/tileLayer.cpp"
+}
+]

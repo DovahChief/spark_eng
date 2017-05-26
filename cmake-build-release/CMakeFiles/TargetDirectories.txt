@@ -1,3 +1,0 @@
-/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-release/CMakeFiles/rebuild_cache.dir
-/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-release/CMakeFiles/edit_cache.dir
-/home/jose/Documentos/c++/eclipseWS/spark/cmake-build-release/CMakeFiles/spark.dir

@@ -7,63 +7,65 @@
 
 #include "includes.h"
 
-int main(){
+
+
+int main() {
+	constexpr int ANCHO_W = 800;
+	constexpr int ALTO_W  = 450;
 
 	using namespace spark;
 	using namespace graphics;
 	using namespace math;
 
-	window w("SPARK2", 800, 450);
-	shader* shad = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
-			"/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
-	shader* shad2 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
-			"/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
-
-
-	//mat4 ortho = mat4::orthographic(0.0f, 16.0f, 0.0f, 9.0f, -1.0f, 1.0f);
-	//shad.setUniformMAT4("pr_mat", ortho);
+    timer tm {};
+    unsigned short fps {0};
+    float x_mouse_pos {0.0f}, y_mouse_pos {0.0f};
     
-    tileLayer layer1(shad);
-    tileLayer layer2(shad2);
+	window w {"SPARK2-1", ANCHO_W, ALTO_W};
+
+	shader* shad1 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
+			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
+	shader* shad2 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
+			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
+    
+    tileLayer layer1 {shad1};
+    tileLayer layer2 {shad2};
 
     srand(time(NULL));
-    for (float y = -9.0f; y < 9.0f; y += 0.1){
-        for (float x = -16.0f; x < 16.0f; x += 0.1){
-            layer1.add( new sprite {x,y, 0.09f, 0.09f, vec4(0,0,rand()%1000/1000.0f,0)});
+    for (float _y = ABA_W; _y < ARR_W; _y += 0.1){
+        for (float _x = IZQ_W; _x < DER_W; _x += 0.1){
+            layer1.add( new sprite {_x,_y, 0.09f, 0.09f, vec4(0,0,rand()%1000/1000.0f,0)});
         }
     }
 
-    layer2.add(new sprite {0,0, 4.0f, 4.0f, vec4(0.7,0,0,0)});
 
-	timer tm { };
-    unsigned short fps {0};
+    std::cout << "ejem multi " << mat4::identity() * vec4(11.0f,3.3f,5.5f,17.117f) << std::endl;
+
+    layer1.add(new sprite {0,0, 4.0f, 4.0f, vec4(0.7,0,0,0)});
+    layer2.add(new sprite {-2,-2, 4.0f, 4.0f, vec4(0.7,0,0,0)});
     tm.reset();
 
 	while(!w.cerrado()){
         w.clear();
-		double x {}, y {};
-		w.mouse_position(x, y);
-        shad->enable();
-		shad->setUniform2f("light_pos", vec2((float) ( (x * 32.0f/800.0f) - 16.0f ),
-                                             (float) (9.0f-(y * 18.0f/450.0f)) ));
+		w.mouse_position(x_mouse_pos , y_mouse_pos );
+        x_mouse_pos =  (x_mouse_pos  * (DER_W * 2)/ANCHO_W) - DER_W;
+        y_mouse_pos =  ARR_W - (y_mouse_pos * (ARR_W * 2)/ALTO_W);
 
-        //shad->setUniform2f("light_pos", vec2(0,4));
+        shad1->enable();
+        shad1->setUniform2f("light_pos", vec2 {x_mouse_pos, y_mouse_pos} );
         shad2->enable();
-        shad2->setUniform2f("light_pos", vec2((float) ( (x * 32.0f/800.0f) - 16.0f ),
-                                            (float) (9.0f-(y * 18.0f/450.0f)) ));
-       shad->setUniformMAT4("ml_mat",mat4::rotation(30.0f, vec3(0,1,0)));
-        layer2.render();
-        layer1.render();
+        shad2->setUniform2f("light_pos", vec2 {x_mouse_pos, y_mouse_pos} );
 
+        layer1.render();
+        layer2.render();
 		w.update();
 
-        fps++;
         if (tm.get_diff() >= 1){
-            printf("FPS : %d \n", fps);
+            std::cout << "FPS : " << fps <<std::endl;
             tm.reset();
             fps = 0;
         }
-
+        fps++;
 	}
 
 	return (0);
