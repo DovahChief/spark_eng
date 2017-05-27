@@ -59,7 +59,7 @@ int main() {
 		w.update();
 
         if (tm.get_diff() >= 1){
-            std::cout << "FPS : " << fps <<std::endl;
+            std::cout << "Frames : " << fps <<std::endl;
             tm.reset();
             fps = 0;
         }

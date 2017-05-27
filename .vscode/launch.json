@@ -1,9 +1,8 @@
 {
     "version": "0.2.0",
     "configurations": [
-        
         {
-            "name": "(gdb) Launch",
+            "name": "C++ DEBUG",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceRoot}/build/spark",
@@ -12,6 +11,7 @@
             "cwd": "${workspaceRoot}",
             "environment": [],
             "externalConsole": true,
+            "miDebuggerPath": "/usr/bin/gdb",
             "MIMode": "gdb",
             "setupCommands": [
                 {

@@ -1,0 +1,2 @@
+executable;spark;/home/jose/Documentos/c++/spark_eng/build/spark
+system;Linux;x86_64;GNU

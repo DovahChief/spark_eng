@@ -1,0 +1,2 @@
+executable;spark;$<TARGET_FILE:spark>
+system;Linux;x86_64;GNU
