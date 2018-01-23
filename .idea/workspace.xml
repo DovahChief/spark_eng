@@ -11,12 +11,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8738db90-4ecb-47f4-b19e-7c9c550c4947" name="Default" comment="Rutas absolutas para los shaders">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" />
+    <list default="true" id="8738db90-4ecb-47f4-b19e-7c9c550c4947" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change beforePath="$PROJECT_DIR$/src/spark.cpp" afterPath="$PROJECT_DIR$/src/spark.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -514,7 +510,7 @@
       <workItem from="1516649681628" duration="1602000" />
       <workItem from="1516651486678" duration="410000" />
       <workItem from="1516652198934" duration="2586000" />
-      <workItem from="1516725719989" duration="1398000" />
+      <workItem from="1516725719989" duration="1411000" />
     </task>
     <task id="LOCAL-00001" summary="pragma once">
       <created>1494189078379</created>
@@ -621,11 +617,18 @@
       <option name="project" value="LOCAL" />
       <updated>1494539345574</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Rutas absolutas para los shaders">
+      <created>1516727134612</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1516727134612</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97706000" />
+    <option name="totallyTimeSpent" value="97719000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
