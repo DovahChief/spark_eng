@@ -5,8 +5,8 @@
  *
  * */
 
+#include <random>
 #include "includes.h"
-
 
 
 int main() {
@@ -22,22 +22,19 @@ int main() {
     float x_mouse_pos {0.0f}, y_mouse_pos {0.0f};
     
 	window w {"SPARK", ANCHO_W, ALTO_W};
-
-	shader* shad1 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
-			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
-	shader* shad2 = new shader { "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.vert",
-			                     "/home/jose/Documentos/c++/eclipseWS/spark/src/shader/basicShader.frag" };
+	shader* shad1 = new shader { "../src/shader/basicShader.vert", "../src/shader/basicShader.frag" };
+	shader* shad2 = new shader { "../src/shader/basicShader.vert", "../src/shader/basicShader.frag" };
     
     tileLayer layer1 {shad1};
     tileLayer layer2 {shad2};
 
-    srand(time(NULL));
-    for (float _y = ABA_W; _y < ARR_W; _y += 0.1){
-        for (float _x = IZQ_W; _x < DER_W; _x += 0.1){
-            layer1.add( new sprite {_x,_y, 0.09f, 0.09f, vec4(0,0,rand()%1000/1000.0f,0)});
+    std::default_random_engine eng; //random number generator
+    srand(time(nullptr));
+    for (float _y = ABA_W; _y < ARR_W; _y += 0.1f){
+        for (float _x = IZQ_W; _x < DER_W; _x += 0.1f){
+            layer1.add( new sprite {_x,_y, 0.09f, 0.09f, vec4(0,0,eng()%1000/1000.0f,0)});
         }
     }
-
 
     layer1.add(new sprite {0,0, 4.0f, 4.0f, vec4(0.7,0,0,0)});
     layer2.add(new sprite {-2,-2, 4.0f, 4.0f, vec4(0.7,0,0,0)});
