@@ -14,8 +14,8 @@ set(SOURCE_FILES
         src/graphic/graphic.h
         src/graphic/SpriteRenderer/renderable2D.h
         src/graphic/SpriteRenderer/renderer2D.h
-        src/graphic/shader.cpp
-        src/graphic/shader.h
+        src/graphic/Shader.cpp
+        src/graphic/Shader.h
         src/graphic/window.cpp
         src/graphic/window.h
         src/math/mat4.cpp
@@ -37,10 +37,10 @@ set(SOURCE_FILES
         src/graphic/SpriteRenderer/sprite.cpp
         src/graphic/SpriteRenderer/sprite.h
         src/utils/timer.h
-        src/graphic/layers/layer.cpp
-        src/graphic/layers/layer.h
-        src/graphic/layers/tileLayer.cpp
-        src/graphic/layers/tileLayer.h)
+        src/graphic/layers/Layer.cpp
+        src/graphic/layers/Layer.h
+        src/graphic/layers/TileLayer.cpp
+        src/graphic/layers/TileLayer.h)
 
 add_executable(spark ${SOURCE_FILES})
 set(CMAKE_BUILD_TYPE RELEASE)

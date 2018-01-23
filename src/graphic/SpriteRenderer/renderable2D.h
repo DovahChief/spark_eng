@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "../shader.h"
+#include "../Shader.h"
 
 #include "../buffers/buffer.h"
 #include "../buffers/indexBuffer.h"

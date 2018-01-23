@@ -20,11 +20,11 @@
 namespace spark{
 	namespace graphics{
 
-		class shader
+		class Shader
 		{
 			public:
-				shader(const std::string& _file_v, const std::string& _file_f);
-				virtual ~shader();
+				Shader(const std::string& _file_v, const std::string& _file_f);
+				virtual ~Shader();
 				void enable();
 				void disable();
 

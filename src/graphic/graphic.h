@@ -1,7 +1,7 @@
 #pragma once
 
 #include "window.h"
-#include "shader.h"
+#include "Shader.h"
 #include "SpriteRenderer/renderable2D.h"
 #include "SpriteRenderer/renderer2D.h"
 #include "SpriteRenderer/sprite.h"
@@ -9,7 +9,7 @@
 #include "buffers/buffer.h"
 #include "buffers/indexBuffer.h"
 #include "buffers/vertexArray.h"
-#include "layers/tileLayer.h"
+#include "layers/TileLayer.h"
 
 
 

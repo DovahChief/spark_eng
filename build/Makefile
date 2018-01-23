@@ -258,86 +258,86 @@ src/graphic/buffers/vertexArray.cpp.s:
 	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.s
 .PHONY : src/graphic/buffers/vertexArray.cpp.s
 
-src/graphic/layers/layer.o: src/graphic/layers/layer.cpp.o
+src/graphic/layers/Layer.o: src/graphic/layers/Layer.cpp.o
 
-.PHONY : src/graphic/layers/layer.o
-
-# target to build an object file
-src/graphic/layers/layer.cpp.o:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o
-.PHONY : src/graphic/layers/layer.cpp.o
-
-src/graphic/layers/layer.i: src/graphic/layers/layer.cpp.i
-
-.PHONY : src/graphic/layers/layer.i
-
-# target to preprocess a source file
-src/graphic/layers/layer.cpp.i:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.i
-.PHONY : src/graphic/layers/layer.cpp.i
-
-src/graphic/layers/layer.s: src/graphic/layers/layer.cpp.s
-
-.PHONY : src/graphic/layers/layer.s
-
-# target to generate assembly for a file
-src/graphic/layers/layer.cpp.s:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.s
-.PHONY : src/graphic/layers/layer.cpp.s
-
-src/graphic/layers/tileLayer.o: src/graphic/layers/tileLayer.cpp.o
-
-.PHONY : src/graphic/layers/tileLayer.o
+.PHONY : src/graphic/layers/Layer.o
 
 # target to build an object file
-src/graphic/layers/tileLayer.cpp.o:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o
-.PHONY : src/graphic/layers/tileLayer.cpp.o
+src/graphic/layers/Layer.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o
+.PHONY : src/graphic/layers/Layer.cpp.o
 
-src/graphic/layers/tileLayer.i: src/graphic/layers/tileLayer.cpp.i
+src/graphic/layers/Layer.i: src/graphic/layers/Layer.cpp.i
 
-.PHONY : src/graphic/layers/tileLayer.i
+.PHONY : src/graphic/layers/Layer.i
 
 # target to preprocess a source file
-src/graphic/layers/tileLayer.cpp.i:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.i
-.PHONY : src/graphic/layers/tileLayer.cpp.i
+src/graphic/layers/Layer.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.i
+.PHONY : src/graphic/layers/Layer.cpp.i
 
-src/graphic/layers/tileLayer.s: src/graphic/layers/tileLayer.cpp.s
+src/graphic/layers/Layer.s: src/graphic/layers/Layer.cpp.s
 
-.PHONY : src/graphic/layers/tileLayer.s
+.PHONY : src/graphic/layers/Layer.s
 
 # target to generate assembly for a file
-src/graphic/layers/tileLayer.cpp.s:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.s
-.PHONY : src/graphic/layers/tileLayer.cpp.s
+src/graphic/layers/Layer.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.s
+.PHONY : src/graphic/layers/Layer.cpp.s
 
-src/graphic/shader.o: src/graphic/shader.cpp.o
+src/graphic/layers/TileLayer.o: src/graphic/layers/TileLayer.cpp.o
 
-.PHONY : src/graphic/shader.o
+.PHONY : src/graphic/layers/TileLayer.o
 
 # target to build an object file
-src/graphic/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/shader.cpp.o
-.PHONY : src/graphic/shader.cpp.o
+src/graphic/layers/TileLayer.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o
+.PHONY : src/graphic/layers/TileLayer.cpp.o
 
-src/graphic/shader.i: src/graphic/shader.cpp.i
+src/graphic/layers/TileLayer.i: src/graphic/layers/TileLayer.cpp.i
 
-.PHONY : src/graphic/shader.i
+.PHONY : src/graphic/layers/TileLayer.i
 
 # target to preprocess a source file
-src/graphic/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/shader.cpp.i
-.PHONY : src/graphic/shader.cpp.i
+src/graphic/layers/TileLayer.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.i
+.PHONY : src/graphic/layers/TileLayer.cpp.i
 
-src/graphic/shader.s: src/graphic/shader.cpp.s
+src/graphic/layers/TileLayer.s: src/graphic/layers/TileLayer.cpp.s
 
-.PHONY : src/graphic/shader.s
+.PHONY : src/graphic/layers/TileLayer.s
 
 # target to generate assembly for a file
-src/graphic/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/shader.cpp.s
-.PHONY : src/graphic/shader.cpp.s
+src/graphic/layers/TileLayer.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.s
+.PHONY : src/graphic/layers/TileLayer.cpp.s
+
+src/graphic/Shader.o: src/graphic/Shader.cpp.o
+
+.PHONY : src/graphic/Shader.o
+
+# target to build an object file
+src/graphic/Shader.cpp.o:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/Shader.cpp.o
+.PHONY : src/graphic/Shader.cpp.o
+
+src/graphic/Shader.i: src/graphic/Shader.cpp.i
+
+.PHONY : src/graphic/Shader.i
+
+# target to preprocess a source file
+src/graphic/Shader.cpp.i:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/Shader.cpp.i
+.PHONY : src/graphic/Shader.cpp.i
+
+src/graphic/Shader.s: src/graphic/Shader.cpp.s
+
+.PHONY : src/graphic/Shader.s
+
+# target to generate assembly for a file
+src/graphic/Shader.cpp.s:
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/Shader.cpp.s
+.PHONY : src/graphic/Shader.cpp.s
 
 src/graphic/window.o: src/graphic/window.cpp.o
 
@@ -525,15 +525,15 @@ help:
 	@echo "... src/graphic/buffers/vertexArray.o"
 	@echo "... src/graphic/buffers/vertexArray.i"
 	@echo "... src/graphic/buffers/vertexArray.s"
-	@echo "... src/graphic/layers/layer.o"
-	@echo "... src/graphic/layers/layer.i"
-	@echo "... src/graphic/layers/layer.s"
-	@echo "... src/graphic/layers/tileLayer.o"
-	@echo "... src/graphic/layers/tileLayer.i"
-	@echo "... src/graphic/layers/tileLayer.s"
-	@echo "... src/graphic/shader.o"
-	@echo "... src/graphic/shader.i"
-	@echo "... src/graphic/shader.s"
+	@echo "... src/graphic/layers/Layer.o"
+	@echo "... src/graphic/layers/Layer.i"
+	@echo "... src/graphic/layers/Layer.s"
+	@echo "... src/graphic/layers/TileLayer.o"
+	@echo "... src/graphic/layers/TileLayer.i"
+	@echo "... src/graphic/layers/TileLayer.s"
+	@echo "... src/graphic/Shader.o"
+	@echo "... src/graphic/Shader.i"
+	@echo "... src/graphic/Shader.s"
 	@echo "... src/graphic/window.o"
 	@echo "... src/graphic/window.i"
 	@echo "... src/graphic/window.s"

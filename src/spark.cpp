@@ -22,11 +22,11 @@ int main() {
     float x_mouse_pos {0.0f}, y_mouse_pos {0.0f};
     
 	window w {"SPARK", ANCHO_W, ALTO_W};
-	shader* shad1 = new shader { "../src/shader/basicShader.vert", "../src/shader/basicShader.frag" };
-	shader* shad2 = new shader { "../src/shader/basicShader.vert", "../src/shader/basicShader.frag" };
+	Shader* shad1 = new Shader { "../src/Shader/basicShader.vert", "../src/Shader/basicShader.frag" };
+	Shader* shad2 = new Shader { "../src/Shader/basicShader.vert", "../src/Shader/basicShader.frag" };
     
-    tileLayer layer1 {shad1};
-    tileLayer layer2 {shad2};
+    TileLayer layer1 {shad1};
+    TileLayer layer2 {shad2};
 
     std::default_random_engine eng; //random number generator
     srand(time(nullptr));

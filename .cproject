@@ -54,7 +54,7 @@
 						</tool>
 					</fileInfo>
 					<sourceEntries>
-						<entry excluding="shader" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+						<entry excluding="Shader" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

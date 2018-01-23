@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "layer.h"
+#include "Layer.h"
 #include "../SpriteRenderer/batchRender.h"
 
 namespace spark {
@@ -17,10 +17,10 @@ namespace spark {
         constexpr float NEAR_W= -1.0f;
         constexpr float FAR_W =  1.0f;
 
-        class tileLayer : public layer {
+        class TileLayer : public Layer {
         public:
-            tileLayer(shader* _shad);
-            ~tileLayer();
+            TileLayer(Shader* _shad);
+            ~TileLayer();
         };
 
     }/* namespace graphics */

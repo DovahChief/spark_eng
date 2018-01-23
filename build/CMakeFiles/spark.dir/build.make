@@ -129,28 +129,28 @@ CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.o.provides: CMakeFiles/
 CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.o
 
 
-CMakeFiles/spark.dir/src/graphic/shader.cpp.o: CMakeFiles/spark.dir/flags.make
-CMakeFiles/spark.dir/src/graphic/shader.cpp.o: ../src/graphic/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Documentos/c++/spark_eng/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/spark.dir/src/graphic/shader.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spark.dir/src/graphic/shader.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/shader.cpp
+CMakeFiles/spark.dir/src/graphic/Shader.cpp.o: CMakeFiles/spark.dir/flags.make
+CMakeFiles/spark.dir/src/graphic/Shader.cpp.o: ../src/graphic/Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Documentos/c++/spark_eng/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/spark.dir/src/graphic/Shader.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spark.dir/src/graphic/Shader.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/Shader.cpp
 
-CMakeFiles/spark.dir/src/graphic/shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spark.dir/src/graphic/shader.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Documentos/c++/spark_eng/src/graphic/shader.cpp > CMakeFiles/spark.dir/src/graphic/shader.cpp.i
+CMakeFiles/spark.dir/src/graphic/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spark.dir/src/graphic/Shader.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Documentos/c++/spark_eng/src/graphic/Shader.cpp > CMakeFiles/spark.dir/src/graphic/Shader.cpp.i
 
-CMakeFiles/spark.dir/src/graphic/shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spark.dir/src/graphic/shader.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Documentos/c++/spark_eng/src/graphic/shader.cpp -o CMakeFiles/spark.dir/src/graphic/shader.cpp.s
+CMakeFiles/spark.dir/src/graphic/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spark.dir/src/graphic/Shader.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Documentos/c++/spark_eng/src/graphic/Shader.cpp -o CMakeFiles/spark.dir/src/graphic/Shader.cpp.s
 
-CMakeFiles/spark.dir/src/graphic/shader.cpp.o.requires:
+CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.requires:
 
-.PHONY : CMakeFiles/spark.dir/src/graphic/shader.cpp.o.requires
+.PHONY : CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.requires
 
-CMakeFiles/spark.dir/src/graphic/shader.cpp.o.provides: CMakeFiles/spark.dir/src/graphic/shader.cpp.o.requires
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/shader.cpp.o.provides.build
-.PHONY : CMakeFiles/spark.dir/src/graphic/shader.cpp.o.provides
+CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.provides: CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.requires
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.provides.build
+.PHONY : CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.provides
 
-CMakeFiles/spark.dir/src/graphic/shader.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/shader.cpp.o
+CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/Shader.cpp.o
 
 
 CMakeFiles/spark.dir/src/graphic/window.cpp.o: CMakeFiles/spark.dir/flags.make
@@ -345,52 +345,52 @@ CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o.provides: CMakeFile
 CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o
 
 
-CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o: CMakeFiles/spark.dir/flags.make
-CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o: ../src/graphic/layers/layer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Documentos/c++/spark_eng/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/layers/layer.cpp
+CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o: CMakeFiles/spark.dir/flags.make
+CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o: ../src/graphic/layers/Layer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Documentos/c++/spark_eng/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/layers/Layer.cpp
 
-CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Documentos/c++/spark_eng/src/graphic/layers/layer.cpp > CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.i
+CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Documentos/c++/spark_eng/src/graphic/layers/Layer.cpp > CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.i
 
-CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Documentos/c++/spark_eng/src/graphic/layers/layer.cpp -o CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.s
+CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Documentos/c++/spark_eng/src/graphic/layers/Layer.cpp -o CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.s
 
-CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.requires:
+CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.requires:
 
-.PHONY : CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.requires
+.PHONY : CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.requires
 
-CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.provides: CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.provides.build
-.PHONY : CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.provides
+CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.provides: CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.provides.build
+.PHONY : CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.provides
 
-CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o
+CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o
 
 
-CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o: CMakeFiles/spark.dir/flags.make
-CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o: ../src/graphic/layers/tileLayer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Documentos/c++/spark_eng/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/layers/tileLayer.cpp
+CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o: CMakeFiles/spark.dir/flags.make
+CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o: ../src/graphic/layers/TileLayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jose/Documentos/c++/spark_eng/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o -c /home/jose/Documentos/c++/spark_eng/src/graphic/layers/TileLayer.cpp
 
-CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Documentos/c++/spark_eng/src/graphic/layers/tileLayer.cpp > CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.i
+CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jose/Documentos/c++/spark_eng/src/graphic/layers/TileLayer.cpp > CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.i
 
-CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Documentos/c++/spark_eng/src/graphic/layers/tileLayer.cpp -o CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.s
+CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jose/Documentos/c++/spark_eng/src/graphic/layers/TileLayer.cpp -o CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.s
 
-CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.requires:
+CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.requires:
 
-.PHONY : CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.requires
+.PHONY : CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.requires
 
-CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.provides: CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.provides.build
-.PHONY : CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.provides
+CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.provides: CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/spark.dir/build.make CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.provides.build
+.PHONY : CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.provides
 
-CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o
+CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.provides.build: CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o
 
 
 # Object files for target spark
@@ -398,7 +398,7 @@ spark_OBJECTS = \
 "CMakeFiles/spark.dir/src/graphic/buffers/buffer.cpp.o" \
 "CMakeFiles/spark.dir/src/graphic/buffers/indexBuffer.cpp.o" \
 "CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.o" \
-"CMakeFiles/spark.dir/src/graphic/shader.cpp.o" \
+"CMakeFiles/spark.dir/src/graphic/Shader.cpp.o" \
 "CMakeFiles/spark.dir/src/graphic/window.cpp.o" \
 "CMakeFiles/spark.dir/src/math/mat4.cpp.o" \
 "CMakeFiles/spark.dir/src/math/vec2.cpp.o" \
@@ -407,8 +407,8 @@ spark_OBJECTS = \
 "CMakeFiles/spark.dir/src/spark.cpp.o" \
 "CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.o" \
 "CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o" \
-"CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o" \
-"CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o"
+"CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o" \
+"CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o"
 
 # External object files for target spark
 spark_EXTERNAL_OBJECTS =
@@ -416,7 +416,7 @@ spark_EXTERNAL_OBJECTS =
 spark: CMakeFiles/spark.dir/src/graphic/buffers/buffer.cpp.o
 spark: CMakeFiles/spark.dir/src/graphic/buffers/indexBuffer.cpp.o
 spark: CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.o
-spark: CMakeFiles/spark.dir/src/graphic/shader.cpp.o
+spark: CMakeFiles/spark.dir/src/graphic/Shader.cpp.o
 spark: CMakeFiles/spark.dir/src/graphic/window.cpp.o
 spark: CMakeFiles/spark.dir/src/math/mat4.cpp.o
 spark: CMakeFiles/spark.dir/src/math/vec2.cpp.o
@@ -425,8 +425,8 @@ spark: CMakeFiles/spark.dir/src/math/vec4.cpp.o
 spark: CMakeFiles/spark.dir/src/spark.cpp.o
 spark: CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.o
 spark: CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o
-spark: CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o
-spark: CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o
+spark: CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o
+spark: CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o
 spark: CMakeFiles/spark.dir/build.make
 spark: CMakeFiles/spark.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jose/Documentos/c++/spark_eng/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable spark"
@@ -440,7 +440,7 @@ CMakeFiles/spark.dir/build: spark
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/buffers/buffer.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/buffers/indexBuffer.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/buffers/vertexArray.cpp.o.requires
-CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/shader.cpp.o.requires
+CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/Shader.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/window.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/math/mat4.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/math/vec2.cpp.o.requires
@@ -449,8 +449,8 @@ CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/math/vec4.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/spark.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/SpriteRenderer/batchRender.cpp.o.requires
 CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/SpriteRenderer/sprite.cpp.o.requires
-CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/layers/layer.cpp.o.requires
-CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/layers/tileLayer.cpp.o.requires
+CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/layers/Layer.cpp.o.requires
+CMakeFiles/spark.dir/requires: CMakeFiles/spark.dir/src/graphic/layers/TileLayer.cpp.o.requires
 
 .PHONY : CMakeFiles/spark.dir/requires
 

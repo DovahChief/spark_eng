@@ -5,7 +5,7 @@
  *      Author: jose
  */
 
-#include "shader.h"
+#include "Shader.h"
 
 
 namespace spark{
@@ -14,7 +14,7 @@ namespace spark{
 		static void check_shader_err(GLuint shader, GLuint flag, bool esPrograma, const std::string& msj_err);
 		static GLuint load( const std::string& text, GLenum shader_type);
 
-		shader::shader(const std::string& _file_v, const std::string& _file_f){
+		Shader::Shader(const std::string& _file_v, const std::string& _file_f){
 			//ctor
 			m_shader_id = glCreateProgram();
 			m_shaders[0] = load(F::lee_arch(_file_v), GL_VERTEX_SHADER);
@@ -36,7 +36,7 @@ namespace spark{
 			m_uniforms[TRANSFORM_U] = glGetUniformLocation(m_shader_id, "transform");
 
 		}
-		shader::~shader(){
+		Shader::~Shader(){
 			//dtor
 			for(unsigned int i=0; i<NUM_SHADERS; i++){
 				glDetachShader(m_shader_id, m_shaders[i]);
@@ -45,44 +45,44 @@ namespace spark{
 			glDeleteProgram(m_shader_id);
 		}
 
-		GLint shader::get_UniformLocation(const GLchar* _nombre){
+		GLint Shader::get_UniformLocation(const GLchar* _nombre){
 			return (glGetUniformLocation(m_shader_id, _nombre));
 		}
 
-		void shader::enable(){
+		void Shader::enable(){
 			glUseProgram(m_shader_id);
 		}
-		void shader::disable(){
+		void Shader::disable(){
 			glUseProgram(0);
 		}
 
 
-		void shader::setUniformMAT4(const GLchar* _nombre, const math::mat4 _mat){
+		void Shader::setUniformMAT4(const GLchar* _nombre, const math::mat4 _mat){
 			glUniformMatrix4fv(get_UniformLocation(_nombre), 1, GL_FALSE, _mat.elements);
 		}
 
 
-		void shader::setUniform1f(const GLchar* _nombre, float val ){
+		void Shader::setUniform1f(const GLchar* _nombre, float val ){
 			glUniform1f(get_UniformLocation(_nombre), val);
 		}
-		void shader::setUniform1i(const GLchar* _nombre, int val ){
+		void Shader::setUniform1i(const GLchar* _nombre, int val ){
 			glUniform1i(get_UniformLocation(_nombre), val);
 		}
-		void shader::setUniform2f(const GLchar* _nombre, const math::vec2& _vector ){
+		void Shader::setUniform2f(const GLchar* _nombre, const math::vec2& _vector ){
 			glUniform2f(get_UniformLocation(_nombre), _vector.x, _vector.y);
 		}
-		void shader::setUniform3f(const GLchar* _nombre, const math::vec3& _vector ){
+		void Shader::setUniform3f(const GLchar* _nombre, const math::vec3& _vector ){
 			glUniform3f(get_UniformLocation(_nombre), _vector.x, _vector.y, _vector.z);
 		}
-		void shader::setUniform4f(const GLchar* _nombre, const math::vec4& _vector ){
+		void Shader::setUniform4f(const GLchar* _nombre, const math::vec4& _vector ){
 			glUniform4f(get_UniformLocation(_nombre), _vector.x, _vector.y, _vector.z, _vector.w);
 		}
 
-		//crea shader
+		//crea Shader
 		static GLuint load( const std::string& text, GLenum shader_type){
 			GLint shader = glCreateShader(shader_type);
 
-			if(shader == 0) std::cerr<<"Error: fallo en creacion del shader "<<std::endl;
+			if(shader == 0) std::cerr<<"Error: fallo en creacion del Shader "<<std::endl;
 
 			const GLchar*shader_source_str[1] { };
 			GLint shader_source_ln[1] { };
@@ -93,7 +93,7 @@ namespace spark{
 			glShaderSource(shader, 1, shader_source_str, shader_source_ln);
 			glCompileShader(shader);
 
-			check_shader_err(shader, GL_COMPILE_STATUS, false, "Error compilando shader");
+			check_shader_err(shader, GL_COMPILE_STATUS, false, "Error compilando Shader");
 
 			return (shader);
 		}

@@ -7,24 +7,24 @@
 
 #include "../SpriteRenderer/renderer2D.h"
 #include "../SpriteRenderer/renderable2D.h"
-#include "../shader.h"
+#include "../Shader.h"
 #include "../../math/mat4.h"
 
 //toma el control de los renderers
 
 namespace spark {
     namespace graphics{
-        class layer{
+        class Layer{
 
         protected:
             renderer2D* m_renderer;
             std::vector<renderable2D*> m_renderables;
-            shader* m_shad;
+            Shader* m_shad;
             math::mat4 m_mat_proy;
         protected:
-            layer(renderer2D * _rend, shader* _shad, math::mat4 _prMat);
+            Layer(renderer2D * _rend, Shader* _shad, math::mat4 _prMat);
         public:
-            virtual ~layer();
+            virtual ~Layer();
             virtual void  add(renderable2D* _rend);
             virtual void render();
         };
